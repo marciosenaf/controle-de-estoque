@@ -6,11 +6,24 @@ const cors = require("cors");
 
 const app = express()
 
-mongoose
-.connect(`mongodb+srv://usuario1:usuario1@cluster0.wrtuelt.mongodb.net/Inventory-control?retryWrites=true&w=majority`)
-.then(() => {
-    console.log("Conectamos ao mongodb")
-    app.listen(3000)
+//Middlewares
+app.use(express.json())
 
-}) 
-.catch((err) => console.log(err))
+app.use(express.urlencoded({
+    extended: false
+}))
+
+app.use = (bodyParser.json())
+
+//routes 
+app.get("/", (req, res) => {
+    res.send("Home Page")
+})
+
+mongoose
+    .connect(`mongodb+srv://usuario1:usuario1@cluster0.wrtuelt.mongodb.net/Inventory-control?retryWrites=true&w=majority`)
+    .then(() => {
+        console.log("Conectamos ao mongodb")
+        app.listen(3000)
+    })
+    .catch((err) => console.log(err))
