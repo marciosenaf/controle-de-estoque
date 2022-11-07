@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 mongoose
     .connect(`mongodb+srv://usuario1:usuario1@cluster0.wrtuelt.mongodb.net/Inventory-control?retryWrites=true&w=majority`)
     .then(() => {
-        console.log("Conectamos ao mongodb")
+        console.log("Conectado ao mongodb")
         app.listen(3000)
     })
     .catch((err) => console.log(err))
