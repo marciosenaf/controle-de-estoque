@@ -20,7 +20,7 @@ const createProduct = asyncHandler(async (req, res) => {
     let uploadedFile;
     try {
       uploadedFile = await cloudinary.uploader.upload(req.file.path, {
-        folder: "Pinvent App",
+        folder: "Inventory Control",
         resource_type: "image",
       });
     } catch (error) {
@@ -104,7 +104,7 @@ const updateProduct = asyncHandler(async (req, res) => {
   }
   // Match product to its user
   if (product.user.toString() !== req.user.id) {
-    res.status(401);
+    res.status(401); 
     throw new Error("User not authorized");
   }
 
