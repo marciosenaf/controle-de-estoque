@@ -18,11 +18,12 @@ const Header = () => {
   return (
     <div className="--pad header">
       <div className="--flex-between">
-        <h3>
+        <di></di>
+        <h3 >
           <span className="--fw-thin">Welcome, </span>
-          <span className="--color-danger">{name}</span>
+          <span className="--color-blue">{name}</span>
         </h3>
-        <button onClick={logout} className="--btn --btn-danger">
+        <button onClick={logout} className="--btn --btn-danger ">
           Logout
         </button>
       </div>

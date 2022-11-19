@@ -1,5 +1,4 @@
 import React from "react";
-import { RiProductHuntLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
@@ -32,7 +31,6 @@ const Home = () => {
           </ShowOnLogin>
         </ul>
       </nav>
-      {/* HERO SECTION */}
       <section className="container hero">
         <div className="hero-text">
           <h2>Inventory {"&"} Stock Management Solution</h2>

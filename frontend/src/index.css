@@ -497,3 +497,7 @@ a:hover {
   background-color: var(--light-blue);
   height: 100%;
 }
+
+.recepcao{
+  text-align: center;
+}
