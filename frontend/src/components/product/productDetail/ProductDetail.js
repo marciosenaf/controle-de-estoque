@@ -24,7 +24,7 @@ const ProductDetail = () => {
     if (quantity > 0) {
       return <span className="--color-success">In Stock</span>;
     }
-    return <span className="--color-danger">Out Of Stock</span>;
+    return <span  className="--color-danger">Out Of Stock</span>;
   };
 
   useEffect(() => {

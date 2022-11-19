@@ -451,7 +451,6 @@ p {
 
 a {
   font-size: 1.4rem;
-  /* color: var(--dark-blue); */
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -498,6 +497,11 @@ a:hover {
   height: 100%;
 }
 
-.recepcao{
-  text-align: center;
+.button123{
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
