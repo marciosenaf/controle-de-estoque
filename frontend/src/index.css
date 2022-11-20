@@ -319,7 +319,9 @@ p {
 
 .--btn-primary {
   color: #fff;
+  border-color: #fff;
   background:var(--dark-blue);
+  border-radius: 8px;
 }
 .--btn-secondary {
   color: #fff;
@@ -482,18 +484,20 @@ a:hover {
   cursor: pointer;
   border-radius: 3px;
   font-weight: normal;
-  color: #333;
+  color: rgb(255, 255, 255);
+  background: var(--dark-blue);
+  border-radius: 8px;
   border: 1px solid #333;
   margin: 2px;
 }
 
 .pagination .page-num:hover {
-  color: #fff;
-  background-color: var(--light-blue);
+  color:var(--dark-blue);
+  background-color:#fff;
 }
 .activePage {
   color: #fff;
-  background-color: var(--light-blue);
+  background-color: var(--dark-blue);
   height: 100%;
 }
 

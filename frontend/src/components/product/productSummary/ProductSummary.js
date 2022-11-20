@@ -43,13 +43,13 @@ const ProductSummary = ({ products }) => {
       <div className="info-summary">
         <InfoBox
           icon={productIcon}
-          title={"Total Products"}
+          title={"Total Items"}
           count={products.length}
           bgColor="card1"
         />
         <InfoBox
           icon={earningIcon}
-          title={"Total Store Value"}
+          title={"Valor Total"}
           count={`$${formatNumbers(totalStoreValue.toFixed(2))}  `}
           bgColor="card2"
         />
