@@ -1,5 +1,6 @@
 .search {
   margin: 5px 0;
+  margin-bottom: 20px;
   position: relative;
   flex: 1;
 
@@ -11,15 +12,16 @@
   }
 
   input[type="text"] {
+    
     display: block;
     font-size: 1.6rem;
     font-weight: 300;
-    padding: 1rem;
+    padding: 5px;
     padding-left: 3rem;
-    margin: 1rem auto;
+    margin: 15px auto;
     width: 100%;
-    border: 1px solid #777;
-    border-radius: 3px;
+    border: 1px solid rgb(142, 142, 142);
+    border-radius: 10px;
     outline: none;
   }
 }
