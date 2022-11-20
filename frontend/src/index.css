@@ -319,7 +319,7 @@ p {
 
 .--btn-primary {
   color: #fff;
-  background: #007bff;
+  background:var(--dark-blue);
 }
 .--btn-secondary {
   color: #fff;
@@ -497,11 +497,3 @@ a:hover {
   height: 100%;
 }
 
-.button123{
-  background-color: var(--dark-blue);
-  color: white;
-  padding: 10px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
