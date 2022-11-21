@@ -58,7 +58,7 @@ function App() {
           path="/add-product"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Add New Product">
                 <AddProduct />
               </Layout>
             </Sidebar>
@@ -88,7 +88,7 @@ function App() {
           path="/profile"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Profile" >
                 <Profile />
               </Layout>
             </Sidebar>
@@ -98,7 +98,7 @@ function App() {
           path="/edit-profile"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Edit Profile">
                 <EditProfile />
               </Layout>
             </Sidebar>
@@ -108,7 +108,7 @@ function App() {
           path="/contact-us"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Contact Us">
                 <Contact />
               </Layout>
             </Sidebar>

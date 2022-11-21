@@ -16,7 +16,6 @@
       margin: 3rem 0;
       span {
         display: flex;
-        justify-content: flex-start;
         align-items:baseline ;
         margin-bottom: 1rem;
         a,
@@ -30,6 +29,9 @@
   .section {
     display: flex;
     align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 
     form {
       width: 500px;

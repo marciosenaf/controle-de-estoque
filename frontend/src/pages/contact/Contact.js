@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../../components/card/Card";
 import "./Contact.scss";
-import { FaPhoneAlt, FaEnvelope, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope,FaLinkedin } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h3 className="--mt">Contact Us</h3>
+      <h3 className="--mt"></h3>
       <div className="section">
         <form onSubmit={sendEmail}>
           <Card cardClass="card">
