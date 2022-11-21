@@ -39,7 +39,7 @@ const Home = () => {
             real timeand integrated to make it easier to develop your business.
           </p>
           <div className="hero-buttons">
-            <button className="--btn --btn-secondary">
+            <button className="--btn --btn-primary">
               <Link to="/dashboard">Enter</Link>
             </button>
           </div>

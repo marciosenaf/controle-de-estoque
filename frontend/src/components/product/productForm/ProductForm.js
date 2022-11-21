@@ -35,7 +35,7 @@ const ProductForm = ({
                 <img src={imagePreview} alt="product" />
               </div>
             ) : (
-              <p>No image set for this poduct.</p>
+              <p className="noimage">No image set for this poduct.</p>
             )}
           </Card>
           <label>Product Name:</label>
@@ -75,6 +75,7 @@ const ProductForm = ({
           />
 
           <label>Product Description:</label>
+          <div className="editor">
           <ReactQuill
             theme="snow"
             value={description}
@@ -82,6 +83,7 @@ const ProductForm = ({
             modules={ProductForm.modules}
             formats={ProductForm.formats}
           />
+          </div>
 
           <div className="--my">
             <button type="submit" className="--btn --btn-primary">

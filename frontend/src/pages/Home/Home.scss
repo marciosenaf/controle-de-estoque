@@ -15,9 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  & li a {
-    color: #fff;
-  }
+
   & > * {
     margin-left: 1rem;
     color: #fff;
@@ -38,9 +36,6 @@
   }
   & > h2 span {
     display: block;
-  }
-  & .hero-buttons a {
-    color: #fff;
   }
 }
 .hero-image {
@@ -67,3 +62,4 @@
     }
   }
 }
+
