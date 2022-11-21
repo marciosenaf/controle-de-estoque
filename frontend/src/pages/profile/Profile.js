@@ -56,7 +56,7 @@ const Profile = () => {
               </p>
               <div>
                 <Link to="/edit-profile">
-                  <button className="--btn --btn-primary">Edit Profile</button>
+                  <button className="--btn --btns-primary">Edit Profile</button>
                 </Link>
               </div>
             </span>

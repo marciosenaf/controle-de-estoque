@@ -86,7 +86,7 @@ const ProductForm = ({
           </div>
 
           <div className="--my">
-            <button type="submit" className="--btn --btn-primary">
+            <button type="submit" className="--btn --btns-primary">
               Save Product
             </button>
           </div>

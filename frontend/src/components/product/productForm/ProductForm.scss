@@ -1,5 +1,8 @@
 .add-product {
   margin-bottom: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
   .card {
     width: 100%;
     max-width: 500px;
