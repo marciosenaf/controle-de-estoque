@@ -39,7 +39,7 @@ const ProductSummary = ({ products }) => {
 
   return (
     <div className="product-summary">
-      <h3 className="--mt">Inventory Stats</h3>
+      <h4 className="--mt">Stats</h4>
       <div className="info-summary">
         <InfoBox
           icon={productIcon}

@@ -49,7 +49,6 @@ const ProductList = ({ products, isLoading }) => {
         },
         {
           label: "Cancel",
-          // onClick: () => alert('Click No')
         },
       ],
     });
@@ -84,7 +83,7 @@ const ProductList = ({ products, isLoading }) => {
       <div className="table">
         <div className="--flex-between --flex-dir-column">
           <span>
-            <h3>Inventory Items</h3>
+            <h4>Items</h4>
           </span>
           <span>
             <Search

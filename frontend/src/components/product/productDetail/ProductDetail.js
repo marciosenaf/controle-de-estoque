@@ -39,7 +39,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <h3 className="--mt">Product Detail</h3>
+      <h3 className="--mt"></h3>
       <Card cardClass="card">
         {isLoading && <SpinnerImg />}
         {product && (
@@ -51,43 +51,43 @@ const ProductDetail = () => {
                   alt={product.image.fileName}
                 />
               ) : (
-                <p>No image set for this product</p>
+                <p className="--color-white">No image set for this product</p>
               )}
             </Card>
-            <h4>Product Availability: {stockStatus(product.quantity)}</h4>
+            <h4 className="--color-white">Product Availability: {stockStatus(product.quantity)}</h4>
             <hr />
-            <h4>
-              <span className="badge">Name: </span> &nbsp; {product.name}
+            <h4 className="--color-white">
+              <span className="badge">Name:</span> &nbsp; {product.name}
             </h4>
-            <p>
-              <b>&rarr; SKU : </b> {product.sku}
+            <p className="--color-white">
+              <b >&rarr; SKU : </b> {product.sku}
             </p>
-            <p>
+            <p className="--color-white">
               <b>&rarr; Category : </b> {product.category}
             </p>
-            <p>
+            <p className="--color-white">
               <b>&rarr; Price : </b> {"$"}
               {product.price}
             </p>
-            <p>
+            <p className="--color-white">
               <b>&rarr; Quantity in stock : </b> {product.quantity}
             </p>
-            <p>
+            <p className="--color-white">
               <b>&rarr; Total Value in stock : </b> {"$"}
               {product.price * product.quantity}
             </p>
             <hr />
             <div
               dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(product.description),
-              }}
+              __html: DOMPurify.sanitize(product.description),
+              }} 
             ></div>
-            <hr />
-            <code className="--color-dark">
+            <hr/>
+            <code className="--color-white">
               Created on: {product.createdAt.toLocaleString("en-US")}
             </code>
             <br />
-            <code className="--color-dark">
+            <code className="--color-white">
               Last Updated: {product.updatedAt.toLocaleString("en-US")}
             </code>
           </div>

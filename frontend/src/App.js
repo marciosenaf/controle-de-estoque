@@ -68,7 +68,7 @@ function App() {
           path="/product-detail/:id"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Product Detail">
                 <ProductDetail />
               </Layout>
             </Sidebar>
@@ -78,7 +78,7 @@ function App() {
           path="/edit-product/:id"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Edit Product">
                 <EditProduct />
               </Layout>
             </Sidebar>
