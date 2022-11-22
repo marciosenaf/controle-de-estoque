@@ -81,7 +81,7 @@ const ProductList = ({ products, isLoading }) => {
     <div className="product-list">
       <hr />
       <div className="table">
-        <div className="--flex-between --flex-dir-column">
+        <div className=" --flex-dir-column">
           <span>
             <h4>Items</h4>
           </span>

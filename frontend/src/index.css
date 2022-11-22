@@ -78,6 +78,7 @@ section {
   align-items: center;
 }
 .--flex-between {
+  margin-left: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,6 +89,8 @@ section {
 }
 
 .--flex-dir-column {
+  justify-content: space-between;
+    align-items: baseline;
   display: flex;
 }
 
@@ -150,6 +153,7 @@ h3 {
 }
 h4 {
   font-size: 2rem;
+  margin-left: 5px;
 }
 
 p {
@@ -239,6 +243,7 @@ p {
 }
 .--mt {
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .--my {

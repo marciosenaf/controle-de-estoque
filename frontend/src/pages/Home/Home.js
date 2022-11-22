@@ -7,7 +7,7 @@ import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 const Home = () => {
   return (
     <div className="home">
-      <nav className="container --flex-between ">
+      <nav className="container  ">
 
         <ul className="home-links">
           <ShowOnLogout>
