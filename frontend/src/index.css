@@ -46,7 +46,6 @@ section {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .--pad {
@@ -201,7 +200,7 @@ p {
   color: #007bff;
 }
 .--color-danger {
-  color: orangered;
+  color: rgb(155, 37, 37);
 }
 .--color-success {
   color: #28a745;
@@ -211,7 +210,7 @@ p {
   color: #fff;
 }
 .--color-dark {
-  color: white;
+  color: rgb(200, 200, 200);
 }
 
 /* Center Text */

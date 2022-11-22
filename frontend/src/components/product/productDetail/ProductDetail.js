@@ -59,25 +59,25 @@ const ProductDetail = () => {
             <h4 className="--color-white">
               <span className="badge">Name:</span> &nbsp; {product.name}
             </h4>
-            <p className="--color-white">
-              <b >&rarr; SKU : </b> {product.sku}
+            <p className="--color-dark">
+              <b className="--color-white" >&rarr; SKU : </b> {product.sku}
             </p>
-            <p className="--color-white">
-              <b>&rarr; Category : </b> {product.category}
+            <p className="--color-dark">
+              <b className="--color-white">&rarr; Category : </b> {product.category}
             </p>
-            <p className="--color-white">
-              <b>&rarr; Price : </b> {"$"}
+            <p className="--color-dark">
+              <b className="--color-white" >&rarr; Price : </b> {"$"}
               {product.price}
             </p>
-            <p className="--color-white">
-              <b>&rarr; Quantity in stock : </b> {product.quantity}
+            <p className="--color-dark">
+              <b className="--color-white">&rarr; Quantity in stock : </b> {product.quantity}
             </p>
-            <p className="--color-white">
-              <b>&rarr; Total Value in stock : </b> {"$"}
+            <p className="--color-dark">
+              <b className="--color-white">&rarr; Total Value in stock : </b> {"$"}
               {product.price * product.quantity}
             </p>
-            <hr />
-            <div
+            <hr/>
+            <div className="color"
               dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(product.description),
               }} 
