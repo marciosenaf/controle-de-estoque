@@ -228,9 +228,7 @@ p {
 }
 
 /* Margin */
-.--m {
-  margin: 1rem;
-}
+
 .--ml {
   margin-left: 1rem;
 }
@@ -379,7 +377,6 @@ p {
 }
 
 .--form-control {
-  font-size: 1.6rem;
   font-weight: 300;
 }
 
