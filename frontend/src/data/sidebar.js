@@ -1,5 +1,7 @@
 import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import { BiImageAdd } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
+import { AiFillEdit } from "react-icons/ai";
 
 const menu = [
   {
@@ -18,10 +20,12 @@ const menu = [
     childrens: [
       {
         title: "Profile",
+        icon: <CgProfile />,
         path: "/profile",
       },
       {
         title: "Edit Profile",
+        icon: <AiFillEdit />,
         path: "/edit-profile",
       },
     ],
