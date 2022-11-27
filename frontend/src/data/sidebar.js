@@ -2,12 +2,18 @@ import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import { BiImageAdd } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { AiFillEdit } from "react-icons/ai";
+import {BsCashCoin} from "react-icons/bs"
 
 const menu = [
   {
     title: "Dashboard",
     icon: <FaTh />,
     path: "/dashboard",
+  },
+  {
+    title: "Sales",
+    icon: <BsCashCoin />,
+    path: "/sales",
   },
   {
     title: "Add Product",

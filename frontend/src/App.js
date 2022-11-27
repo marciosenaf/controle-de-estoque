@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Sales from "./pages/sales/Sales";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Forgot from "./pages/auth/Forgot";
@@ -50,6 +51,16 @@ function App() {
             <Sidebar>
               <Layout>
                 <Dashboard />
+              </Layout>
+            </Sidebar>
+          }
+        />
+          <Route
+          path="/sales"
+          element={
+            <Sidebar>
+              <Layout>
+                <Sales title="Sales"/>
               </Layout>
             </Sidebar>
           }
