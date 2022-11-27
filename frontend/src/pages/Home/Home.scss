@@ -12,6 +12,7 @@
   }
 }
 .home-links {
+    padding: 0px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +24,10 @@
 }
 
 .hero {
+  padding: 0px 15px;
+  margin-top: 8rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -39,11 +42,14 @@
   }
 }
 .hero-image {
-  width: 50%;
+  display: flex;
+  font-size: 30rem;
+  color: #fff;
 }
 @media screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
+    padding: 0px 15px;
   }
 
   .hero-text {
@@ -55,11 +61,6 @@
     margin: auto;
     text-align: center;
   }
-  .hero-image {
-    width: 100%;
-    &img {
-      width: 100%;
-    }
   }
-}
+
 
