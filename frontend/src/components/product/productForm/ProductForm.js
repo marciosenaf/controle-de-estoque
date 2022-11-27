@@ -23,7 +23,6 @@ const ProductForm = ({
               <div className="image-preview">
               </div>
           </Card>
-          <label>Product Name:</label>
           <input
             type="text"
             placeholder="Product Name"
@@ -31,8 +30,6 @@ const ProductForm = ({
             value={product?.name}
             onChange={handleInputChange}
           />
-
-          <label>Product Category:</label>
           <input
             type="text"
             placeholder="Product Category"
@@ -40,8 +37,6 @@ const ProductForm = ({
             value={product?.category}
             onChange={handleInputChange}
           />
-
-          <label>Product Price:</label>
           <input
             type="text"
             placeholder="Product Price"
@@ -49,8 +44,6 @@ const ProductForm = ({
             value={product?.price}
             onChange={handleInputChange}
           />
-
-          <label>Product Quantity:</label>
           <input
             type="text"
             placeholder="Product Quantity"
@@ -61,7 +54,7 @@ const ProductForm = ({
 
           <div className="--my">
             <button type="submit" className="--btn --btns-primary">
-              Save Product
+              Save Sale
             </button>
           </div>
         </form>
