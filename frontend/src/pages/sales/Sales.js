@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SalesList from "../../components/product/salesList/SalesList";
-import AddProduct from "../addProduct/AddProduct"
+import SalesForm from "../addProduct/AddSales"
 import SalesSummary from "../../components/product/salesSummary/SalesSummary";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
@@ -30,7 +30,7 @@ const Sales = () => {
     <div>
       <SalesSummary products={products} />
       <SalesList products={products} isLoading={isLoading} />
-      <AddProduct/>
+      <SalesForm/>
     </div>
   );
 };

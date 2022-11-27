@@ -5,7 +5,7 @@ import Card from "../../card/Card";
 
 import "./ProductForm.scss";
 
-const ProductForm = ({
+const SalesForm = ({
     product,
     productImage,
     imagePreview,
@@ -133,4 +133,4 @@ ProductForm.formats = [
     "align",
 ];
 
-export default ProductForm;
+export default SalesForm;
