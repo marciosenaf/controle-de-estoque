@@ -59,8 +59,8 @@ function App() {
           path="/sales"
           element={
             <Sidebar>
-              <Layout>
-                <Sales title="Sales"/>
+              <Layout title="Sales">
+                <Sales/>
               </Layout>
             </Sidebar>
           }
