@@ -35,13 +35,13 @@ const ProductForm = ({
                 <img src={imagePreview} alt="product" />
               </div>
             ) : (
-              <p className="noimage">No image set for this poduct.</p>
+              <p className="noimage">No image set for this product.</p>
             )}
           </Card>
           <label>Product Name:</label>
           <input
             type="text"
-            placeholder="Product name"
+            placeholder="Product Name"
             name="name"
             value={product?.name}
             onChange={handleInputChange}

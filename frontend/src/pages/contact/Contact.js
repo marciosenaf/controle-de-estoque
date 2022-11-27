@@ -58,7 +58,7 @@ const Contact = () => {
         <div className="details">
           <Card cardClass={"card2"}>
             <h3>Our Contact Information</h3>
-            <p>Fill the form or contact us via other channels listed below</p>
+            <p>Fill out the form or contact us via other channels listed below</p>
 
             <div className="icons">
               <span>
@@ -67,7 +67,7 @@ const Contact = () => {
               </span>
               <span>
                 <FaEnvelope />
-                <p>marcio.invetory@gmail.com</p>
+                <p>marcio.inventory@gmail.com</p>
               </span>
               <span>
                 <GoLocation />
