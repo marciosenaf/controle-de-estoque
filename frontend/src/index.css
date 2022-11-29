@@ -305,7 +305,7 @@ p {
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   transition: all 0.3s;

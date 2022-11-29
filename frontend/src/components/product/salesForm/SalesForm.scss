@@ -1,5 +1,5 @@
 .add-sales {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -18,7 +18,6 @@
             font-size: 1.4rem;
             font-weight: 500;
             color: white;
-            margin-bottom: 10px;
         }
 
         input[type="text"],
@@ -30,10 +29,11 @@
             // font-size: 1.6rem;
             font-weight: 300;
             padding: 1rem;
-            margin: 1rem auto;
             border: 1px solid #777;
             border-radius: 3px;
             margin-left: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
             box-shadow: 10px 5px 5px black;
 
         }
@@ -42,7 +42,7 @@
 
 .group1 {
     border: 3px solid;
-    padding: 11px;
+    padding: 11px 0px;
     background: var(--dark-blue);
 }
 
@@ -75,16 +75,16 @@
 }
 
 .--btns-primary-sales{
-    font-size: 13px ;
+    font-size: 14px ;
     color: #fff;
     border-color: #fff;
     background: var(--dark-blue);
     border-radius: 8px;
-    margin-left: 15px;
-
+    margin-right: 13px;
+    margin-left: 20px;
 }
 .--btns-primary-sales:hover {
     color: var(--dark-blue);
     background-color: #fff;
-    font-size: 13px;
-  }
+    font-size: 14px;
+}

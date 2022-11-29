@@ -105,9 +105,7 @@ const Register = () => {
               value={password2}
               onChange={handleInputChange}
             />
-            <button type="submit" className="--btn --btn-primary --btn-block">
-              Register
-            </button>
+            <button type="submit" className="--btn --btn-primary --btn-block"> Register</button>
           </form>
 
           <span className={styles.register}>

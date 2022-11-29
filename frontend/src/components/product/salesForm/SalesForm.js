@@ -55,11 +55,9 @@ const SalesForm = ({
                         // value={product?.quantity}
                         onChange={handleInputChange}
                     />
-                    <div className="--my">
-                        <button type="submit" className="--btn --btns-primary-sales">
+                    <button type="submit" className="--btn --btns-primary-sales">
                             Save Product
-                        </button>
-                    </div>
+                    </button>
                 </form>
             </Card>
         </div>
