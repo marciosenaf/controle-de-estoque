@@ -29,8 +29,8 @@ const Sales = () => {
   return (
     <div>
       <SalesSummary products={products} />
-      <SalesList products={products} isLoading={isLoading} />
       <SalesForm/>
+      <SalesList products={products} isLoading={isLoading} />
     </div>
   );
 };

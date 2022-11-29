@@ -16,8 +16,9 @@ const SalesForm = ({
     saveProduct,
 }) => {
     return (
-        <div className="add-product">
-            <Card cardClass={"group"}>
+        // 
+        <div className="add-sales">
+            <Card cardClass={"group1"}>
                 <form onSubmit={saveProduct}>
                     <input
                         type="text"
@@ -49,7 +50,7 @@ const SalesForm = ({
                     />
 
                     <div className="--my">
-                        <button type="submit" className="--btn --btns-primary">
+                        <button type="submit" className="--btn --btns-primary-sales">
                             Save Product
                         </button>
                     </div>

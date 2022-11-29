@@ -26,8 +26,11 @@ const Home = () => {
           <ShowOnLogin>
             <li>
               <button className="--btn --btn-primary">
-                <Link to="/dashboard">Dashboard</Link>
+              <Link to="/sales">Sales</Link>
               </button>
+              </li>
+              <li>
+                <Link to="/inventory">inventory</Link>
             </li>
           </ShowOnLogin>
         </ul>

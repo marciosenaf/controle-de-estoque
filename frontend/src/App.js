@@ -46,21 +46,21 @@ function App() {
         <Route path="/resetpassword/:resetToken" element={<Reset />} />
 
         <Route
-          path="/dashboard"
-          element={
-            <Sidebar>
-              <Layout>
-                <Dashboard />
-              </Layout>
-            </Sidebar>
-          }
-        />
-          <Route
           path="/sales"
           element={
             <Sidebar>
               <Layout title="Sales">
                 <Sales/>
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/inventory"
+          element={
+            <Sidebar>
+              <Layout>
+                <Dashboard />
               </Layout>
             </Sidebar>
           }

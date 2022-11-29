@@ -6,14 +6,14 @@ import {BsCashCoin} from "react-icons/bs"
 
 const menu = [
   {
-    title: "Dashboard",
-    icon: <FaTh />,
-    path: "/dashboard",
-  },
-  {
     title: "Sales",
     icon: <BsCashCoin />,
     path: "/sales",
+  },
+  {
+    title: "Inventory",
+    icon: <FaTh />,
+    path: "/inventory",
   },
   {
     title: "Add Product",
