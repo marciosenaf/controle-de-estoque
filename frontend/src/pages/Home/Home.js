@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
-import {AiOutlineRise} from "react-icons/ai"
+import { AiOutlineRise } from "react-icons/ai"
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
@@ -25,11 +25,11 @@ const Home = () => {
           <ShowOnLogin>
             <li>
               <button className="--btn --btn-primary">
-              <Link to="/sales">Sales</Link>
+                <Link to="/sales">Sales</Link>
               </button>
-              </li>
-              <li>
-                <Link to="/inventory">inventory</Link>
+            </li>
+            <li>
+              <Link to="/inventory">inventory</Link>
             </li>
           </ShowOnLogin>
         </ul>
@@ -38,8 +38,9 @@ const Home = () => {
         <div className="hero-text">
           <h2>Inventory {"&"} Stock Management Solution</h2>
           <p>
-            Inventory system to control and manage proucts in the warehouse in
-            real timeand integrated to make it easier to develop your business.
+            Inventory system to control and manage products
+            in the warehouse in real time and integrated to
+            make it easier to develop your business.
           </p>
           <div className="hero-buttons">
             <button className="--btn --btn-primary">
@@ -49,7 +50,7 @@ const Home = () => {
         </div>
 
         <div className=" hero-image">
-          <AiOutlineRise/>
+          <AiOutlineRise />
         </div>
       </section>
     </div>

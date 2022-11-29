@@ -28,13 +28,6 @@ const SalesForm = ({
                         onChange={handleInputChange}
                     />
                     <input
-                        type="text"
-                        placeholder="Product Category"
-                        name="category"
-                        value={product?.category}
-                        onChange={handleInputChange}
-                    />
-                    <input
                         type="number"
                         placeholder="Product Price"
                         name="price"
@@ -48,7 +41,20 @@ const SalesForm = ({
                         value={product?.quantity}
                         onChange={handleInputChange}
                     />
-
+                    <input
+                        type="text"
+                        placeholder="received payment"
+                        name="quantity"
+                        // value={product?.quantity}
+                        onChange={handleInputChange}
+                    />
+                    <input
+                        type="text"
+                        placeholder="buyer"
+                        name="quantity"
+                        // value={product?.quantity}
+                        onChange={handleInputChange}
+                    />
                     <div className="--my">
                         <button type="submit" className="--btn --btns-primary-sales">
                             Save Product
