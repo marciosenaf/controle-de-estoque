@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import {AiOutlineRise} from "react-icons/ai"
-import heroImg from "../../assets/inv-img.png";
 import { ShowOnLogin, ShowOnLogout } from "../../components/protect/HiddenLink";
 
 const Home = () => {
@@ -49,7 +48,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hero-image">
+        <div className=" hero-image">
           <AiOutlineRise/>
         </div>
       </section>

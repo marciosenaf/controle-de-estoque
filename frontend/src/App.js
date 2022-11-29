@@ -49,7 +49,7 @@ function App() {
           path="/sales"
           element={
             <Sidebar>
-              <Layout title="Sales">
+              <Layout >
                 <Sales/>
               </Layout>
             </Sidebar>
@@ -59,7 +59,7 @@ function App() {
           path="/inventory"
           element={
             <Sidebar>
-              <Layout>
+              <Layout title="Inventory">
                 <Inventory/>
               </Layout>
             </Sidebar>
