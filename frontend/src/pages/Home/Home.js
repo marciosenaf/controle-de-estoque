@@ -44,7 +44,7 @@ const Home = () => {
           </p>
           <div className="hero-buttons">
             <button className="--btn --btn-primary">
-              <Link to="/dashboard">Enter</Link>
+              <Link to="/sales">Enter</Link>
             </button>
           </div>
         </div>
