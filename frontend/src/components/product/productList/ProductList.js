@@ -127,7 +127,7 @@ const ProductList = ({ products, isLoading }) => {
                       <td>{quantity}</td>
                       <td>
                         {"$"}
-                        {price * quantity}
+                        {(price * quantity).toFixed(2)}
                       </td>
                       <td className="icons">
                         <span>
