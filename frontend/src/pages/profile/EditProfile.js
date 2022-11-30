@@ -38,6 +38,7 @@ const EditProfile = () => {
 
   const handleImageChange = (e) => {
     setProfileImage(e.target.files[0]);
+    
   };
 
   const saveProfile = async (e) => {
@@ -54,17 +55,20 @@ const EditProfile = () => {
       ) {
         const image = new FormData();
         image.append("file", profileImage);
-        image.append("cloud_name", "zinotrust");
-        image.append("upload_preset", "wk66xdkq");
+        image.append("upload_preset", "eh7vbmid");
+        image.append("public_id", profileImage.name.replace(".jpg","").replace(".png","").replace(".jpeg", ""));
+        image.append("api_key", 481236724323562);
+
+
 
         // First save image to cloudinary
         const response = await fetch(
-          "https://api.cloudinary.com/v1_1/zinotrust/image/upload",
+          "https://api.cloudinary.com/v1_1/dzmwnk1ct/image/upload?",
           { method: "post", body: image }
         );
         const imgData = await response.json();
         imageURL = imgData.url.toString();
-
+        
         // Save Profile
         const formData = {
           name: profile.name,
@@ -72,13 +76,13 @@ const EditProfile = () => {
           bio: profile.bio,
           photo: profileImage ? imageURL : profile.photo,
         };
-
         const data = await updateUser(formData);
         console.log(data);
         toast.success("User updated");
         navigate("/profile");
         setIsLoading(false);
       }
+      
     } catch (error) {
       console.log(error);
       setIsLoading(false);

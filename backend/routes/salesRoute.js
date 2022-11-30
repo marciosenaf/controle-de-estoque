@@ -1,17 +1,17 @@
-const express = require("express");
-const router = express.Router();
-const protect = require("../middleWare/authMiddleware");
-const {
-    createProduct,
-    getProducts,
-    getProduct,
-    deleteProduct,
-    updateProduct,
-} = require("../controllers/productController");
-const { upload } = require("../utils/fileUpload");
+// const express = require("express");
+// const router = express.Router();
+// const protect = require("../middleWare/authMiddleware");
+// const {
+//     createSales,
+//     getSaless,
+//     getSales,
+//     deleteSales,
+//     updateSales,
+// } = require("../controllers/salesController");
+// const { upload } = require("../utils/fileUpload");
 
-router.post("/", protect, upload.single("image"), createProduct);
-router.patch("/:id", protect, upload.single("image"), updateProduct);
-router.get("/", protect, getProducts);
-router.get("/:id", protect, getProduct);
-router.delete("/:id", protect, deleteProduct);
+// router.post("/", sales, upload.single("image"), createSales);
+// router.patch("/:id", sales, upload.single("image"), updateSales);
+// router.get("/", sales, getSaless);
+// router.get("/:id", sales, getSales);
+// router.delete("/:id", sales, deleteSales);
