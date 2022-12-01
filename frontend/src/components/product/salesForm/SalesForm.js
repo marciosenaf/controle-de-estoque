@@ -28,13 +28,6 @@ const SalesForm = ({
                         onChange={handleInputChange}
                     />
                     <input
-                        type="text"
-                        placeholder="Product Category"
-                        name="category"
-                        value={product?.category}
-                        onChange={handleInputChange}
-                    />
-                    <input
                         type="number"
                         placeholder="Product Price"
                         name="price"
@@ -50,14 +43,14 @@ const SalesForm = ({
                     />
                     <input
                         type="text"
-                        placeholder="received payment"
+                        placeholder="Form of Payment"
                         name="quantity"
                         // value={product?.quantity}
                         onChange={handleInputChange}
                     />
                     <input
                         type="text"
-                        placeholder="buyer"
+                        placeholder="Note"
                         name="quantity"
                         // value={product?.quantity}
                         onChange={handleInputChange}
