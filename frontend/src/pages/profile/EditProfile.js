@@ -55,8 +55,10 @@ const EditProfile = () => {
       ) {
         const image = new FormData();
         image.append("file", profileImage);
-        image.append("cloud_name", "dzmwnk1ct");
         image.append("upload_preset", "eh7vbmid");
+        image.append("public_id", profileImage.name.replace(".jpg","").replace(".png","").replace(".jpeg", ""));
+        image.append("api_key", 481236724323562);
+
 
 
         // First save image to cloudinary
