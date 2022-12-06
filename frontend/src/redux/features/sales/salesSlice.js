@@ -16,7 +16,7 @@ const initialState = {
 
 // Create New Sales
 export const createSales = createAsyncThunk(
-    "saless/create",
+    "sales/create",
     async (formData, thunkAPI) => {
         try {
             return await salesService.createSales(formData);
@@ -35,7 +35,7 @@ export const createSales = createAsyncThunk(
 
 // Get all saless
 export const getSaless = createAsyncThunk(
-    "saless/getAll",
+    "sales/getAll",
     async (_, thunkAPI) => {
         try {
             return await salesService.getSales();
@@ -54,7 +54,7 @@ export const getSaless = createAsyncThunk(
 
 // Delete a Sales
 export const deleteSales = createAsyncThunk(
-    "saless/delete",
+    "sales/delete",
     async (id, thunkAPI) => {
         try {
             return await salesService.deleteSales(id);
@@ -73,7 +73,7 @@ export const deleteSales = createAsyncThunk(
 
 // Get a Sales
 export const getSales = createAsyncThunk(
-    "saless/getSales",
+    "sales/getSales",
     async (id, thunkAPI) => {
         try {
             return await salesService.getSales(id);
@@ -91,7 +91,7 @@ export const getSales = createAsyncThunk(
 );
 // Update Sales
 export const updateSales = createAsyncThunk(
-    "saless/updateSales",
+    "sales/updateSales",
     async ({ id, formData }, thunkAPI) => {
         try {
             return await salesService.updateSales(id, formData);

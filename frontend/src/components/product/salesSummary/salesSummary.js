@@ -14,17 +14,20 @@ import {
   selectTotalStoreValue,
 } from "../../../redux/features/product/productSlice";
 
+//travou porque importei para o sales slice e troquei o product para saless
+
 // Icons
 const earningIcon = <AiFillDollarCircle size={40} color="#fff" />;
 const productIcon = <BsCart4 size={40} color="#fff" />;
 const categoryIcon = <BiCategory size={40} color="#fff" />;
+const outOfStockIcon = <BsCartX size={40} color="#fff" />;
 
 // Format Amount
 export const formatNumbers = (x) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-const SalesSummary = ({ products }) => {
+const ProductSummary = ({ products }) => {
   const dispatch = useDispatch();
   const totalStoreValue = useSelector(selectTotalStoreValue);
   const outOfStock = useSelector(selectOutOfStock);
@@ -48,9 +51,15 @@ const SalesSummary = ({ products }) => {
         />
         <InfoBox
           icon={earningIcon}
-          title={"Valor Total"}
+          title={"amount"}
           count={`$${formatNumbers(totalStoreValue.toFixed(2))}  `}
           bgColor="card2"
+        />
+        <InfoBox
+          icon={outOfStockIcon}
+          title={"Out of Stock"}
+          count={outOfStock}
+          bgColor="card3"
         />
         <InfoBox
           icon={categoryIcon}
@@ -63,4 +72,4 @@ const SalesSummary = ({ products }) => {
   );
 };
 
-export default SalesSummary;
+export default ProductSummary;

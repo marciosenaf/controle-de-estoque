@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { SpinnerImg } from "../../loader/Loader";
 import "./SalesList.scss";
+
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
+
 import Search from "../../search/Search";
+
 import { useDispatch, useSelector } from "react-redux";
-import {
-    FILTER_PRODUCTS,
-    selectFilteredPoducts,
-} from "../../../redux/features/product/filterSlice";
+
+
+
+import { FILTER_PRODUCTS, selectFilteredProducts,} from "../../../redux/features/product/filterSlice";
+import { deleteSales, getSaless } from "../../../redux/features/sales/salesSlice";
+
+
 import ReactPaginate from "react-paginate";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
-import {
-    deleteProduct,
-    getProducts,
-} from "../../../redux/features/product/productSlice";
+
 import { Link } from "react-router-dom";
 
 const SalesList = ({ products, isLoading }) => {
     const [search, setSearch] = useState("");
-    const filteredProducts = useSelector(selectFilteredPoducts);
+    const filteredProducts = useSelector(selectFilteredProducts);
 
     const dispatch = useDispatch();
 
@@ -34,8 +37,8 @@ const SalesList = ({ products, isLoading }) => {
 
     const delProduct = async (id) => {
         console.log(id);
-        await dispatch(deleteProduct(id));
-        await dispatch(getProducts());
+        await dispatch(deleteSales(id));
+        await dispatch(getSaless());
     };
 
     const confirmDelete = (id) => {
@@ -109,7 +112,6 @@ const SalesList = ({ products, isLoading }) => {
                                     <th>Quantity</th>
                                     <th>Value</th>
                                     <th>Action</th>
-
                                 </tr>
                             </thead>
 
@@ -128,7 +130,7 @@ const SalesList = ({ products, isLoading }) => {
                                             <td>{quantity}</td>
                                             <td>
                                                 {"$"}
-                                                {price * quantity}
+                                                {(price * quantity).toFixed(2)}
                                             </td>
                                             <td className="icons">
                                                 <span>

@@ -5,7 +5,7 @@ import SalesForm from "../addProduct/AddSales"
 import SalesSummary from "../../components/product/salesSummary/SalesSummary";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
-import { getProducts } from "../../redux/features/product/productSlice";
+import { getSaless } from "../../redux/features/sales/salesSlice";
 
 const Sales = () => {
   useRedirectLoggedOutUser("/login");
@@ -18,7 +18,7 @@ const Sales = () => {
 
   useEffect(() => {
     if (isLoggedIn === true) {
-      dispatch(getProducts());
+      dispatch(getSaless());
     }
 
     if (isError) {

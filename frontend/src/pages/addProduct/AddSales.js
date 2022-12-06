@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import SalesForm from "../../components/product/salesForm/SalesForm";
-import {
-    createProduct,
-    selectIsLoading,
-} from "../../redux/features/product/productSlice";
+import { createSales, selectIsLoading } from "../../redux/features/sales/salesSlice";
 
 const initialState = {
     name: "",
@@ -15,7 +12,7 @@ const initialState = {
     price: "",
 };
 
-const AddProduct = () => {
+const AddSales = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [product, setProduct] = useState(initialState);
@@ -57,9 +54,9 @@ const AddProduct = () => {
 
         console.log(...formData);
 
-        await dispatch(createProduct(formData));
+        await dispatch(createSales,(formData));
 
-        navigate("/inventory");
+        navigate("/sales");
     };
 
     return (
@@ -80,4 +77,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default AddSales;
