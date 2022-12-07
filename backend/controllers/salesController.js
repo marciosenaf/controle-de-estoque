@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const Product = require("../models/salesModel");
+const Sales = require("../models/salesModel");
 const { fileSizeFormatter } = require("../utils/fileUpload");
 const cloudinary = require("cloudinary").v2;
 
@@ -38,7 +38,7 @@ const createProduct = asyncHandler(async (req, res) => {
     }
 
     // Create Product
-    const product = await Product.create({
+    const product = await Sales.create({
         user: req.user.id,
         name,
         sku,
@@ -54,13 +54,13 @@ const createProduct = asyncHandler(async (req, res) => {
 
 // Get all Products
 const getProducts = asyncHandler(async (req, res) => {
-    const products = await Product.find({ user: req.user.id }).sort("-createdAt");
+    const products = await Sales.find({ user: req.user.id }).sort("-createdAt");
     res.status(200).json(products);
 });
 
 // Get single product
 const getProduct = asyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id);
+    const product = await Sales.findById(req.params.id);
     // if product doesnt exist
     if (!product) {
         res.status(404);
@@ -76,7 +76,7 @@ const getProduct = asyncHandler(async (req, res) => {
 
 // Delete Product
 const deleteProduct = asyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id);
+    const product = await Sales.findById(req.params.id);
     // if product doesnt exist
     if (!product) {
         res.status(404);
@@ -96,7 +96,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     const { name, category, quantity, price, description } = req.body;
     const { id } = req.params;
 
-    const product = await Product.findById(id);
+    const product = await Sales.findById(id);
 
     // if product doesnt exist
     if (!product) {
@@ -133,7 +133,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     }
 
     // Update Product
-    const updatedProduct = await Product.findByIdAndUpdate(
+    const updatedProduct = await Sales.findByIdAndUpdate(
         { _id: id },
         {
             name,

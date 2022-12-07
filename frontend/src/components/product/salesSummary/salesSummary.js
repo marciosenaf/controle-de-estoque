@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import "./SalesSummary.scss";
+
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BsCart4, BsCartX } from "react-icons/bs";
 import { BiCategory } from "react-icons/bi";
+
 import InfoBox from "../../infoBox/InfoBox";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -14,7 +16,6 @@ import {
   selectTotalStoreValue,
 } from "../../../redux/features/sales/salesSlice";
 
-//travou porque importei para o sales slice e troquei o product para saless
 
 // Icons
 const earningIcon = <AiFillDollarCircle size={40} color="#fff" />;
@@ -41,7 +42,7 @@ const SalesSummary = ({ products }) => {
 
   return (
     <div className="product-summary">
-      <h4 className="--mt">Stats</h4>
+      <h4 className="--mt" >Stats</h4> 
       <div className="info-summary">
         <InfoBox
           icon={productIcon}

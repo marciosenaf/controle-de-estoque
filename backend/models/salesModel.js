@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ProductSchema = mongoose.Schema(
+const salesSchema = mongoose.Schema(
     {
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -48,5 +48,5 @@ const ProductSchema = mongoose.Schema(
     }
 );
 
-const Product = mongoose.model("Sales", ProductSchema);
-module.exports = Product;
+const Sales = mongoose.model("Sales", salesSchema);
+module.exports = Sales;
