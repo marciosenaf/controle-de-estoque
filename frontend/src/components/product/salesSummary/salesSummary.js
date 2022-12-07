@@ -12,7 +12,7 @@ import {
   selectCategory,
   selectOutOfStock,
   selectTotalStoreValue,
-} from "../../../redux/features/product/productSlice";
+} from "../../../redux/features/sales/salesSlice";
 
 //travou porque importei para o sales slice e troquei o product para saless
 
@@ -27,7 +27,7 @@ export const formatNumbers = (x) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-const ProductSummary = ({ products }) => {
+const SalesSummary = ({ products }) => {
   const dispatch = useDispatch();
   const totalStoreValue = useSelector(selectTotalStoreValue);
   const outOfStock = useSelector(selectOutOfStock);
@@ -72,4 +72,4 @@ const ProductSummary = ({ products }) => {
   );
 };
 
-export default ProductSummary;
+export default SalesSummary;

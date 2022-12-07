@@ -1,11 +1,11 @@
 const asyncHandler = require("express-async-handler");
-const Sales = require("../models/salesModel");
+const Product = require("../models/salesModel");
 const { fileSizeFormatter } = require("../utils/fileUpload");
 const cloudinary = require("cloudinary").v2;
 
-// Create Sales
 
-const createSales = asyncHandler(async (req, res) => {
+// Create Prouct
+const createProduct = asyncHandler(async (req, res) => {
     const { name, sku, category, quantity, price, description } = req.body;
 
     //   Validation
@@ -37,8 +37,8 @@ const createSales = asyncHandler(async (req, res) => {
         };
     }
 
-    // Create Sales
-    const sales = await Sales.create({
+    // Create Product
+    const product = await Product.create({
         user: req.user.id,
         name,
         sku,
@@ -49,62 +49,62 @@ const createSales = asyncHandler(async (req, res) => {
         image: fileData,
     });
 
-    res.status(201).json(sales);
+    res.status(201).json(product);
 });
 
-// Get all Saless
-const getSaless= asyncHandler(async (req, res) => {
-    const saless = await Sales.find({ user: req.user.id }).sort("-createdAt");
-    res.status(200).json(saless);
+// Get all Products
+const getProducts = asyncHandler(async (req, res) => {
+    const products = await Product.find({ user: req.user.id }).sort("-createdAt");
+    res.status(200).json(products);
 });
 
-// Get single Sales
-const getSales = asyncHandler(async (req, res) => {
-    const sales = await Sales.findById(req.params.id);
-    // if Sales doesnt exist
-    if (!sales) {
+// Get single product
+const getProduct = asyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    // if product doesnt exist
+    if (!product) {
         res.status(404);
-        throw new Error("Sales not found");
+        throw new Error("Product not found");
     }
-    // Match Sales to its user
-    if (sales.user.toString() !== req.user.id) {
+    // Match product to its user
+    if (product.user.toString() !== req.user.id) {
         res.status(401);
         throw new Error("User not authorized");
     }
-    res.status(200).json(sales);
+    res.status(200).json(product);
 });
 
-// Delete Sales
-const deleteSales = asyncHandler(async (req, res) => {
-    const sales = await Sales.findById(req.params.id);
-    // if Sales doesnt exist
-    if (!sales) {
+// Delete Product
+const deleteProduct = asyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    // if product doesnt exist
+    if (!product) {
         res.status(404);
-        throw new Error("Sales not found");
+        throw new Error("Product not found");
     }
-    // Match Sales to its user
-    if (sales.user.toString() !== req.user.id) {
+    // Match product to its user
+    if (product.user.toString() !== req.user.id) {
         res.status(401);
         throw new Error("User not authorized");
     }
-    await sales.remove();
-    res.status(200).json({ message: "Sales deleted." });
+    await product.remove();
+    res.status(200).json({ message: "Product deleted." });
 });
 
-// Update Sales
-const updateSales = asyncHandler(async (req, res) => {
+// Update Product
+const updateProduct = asyncHandler(async (req, res) => {
     const { name, category, quantity, price, description } = req.body;
     const { id } = req.params;
 
-    const sales = await Sales.findById(id);
+    const product = await Product.findById(id);
 
-    // if Sales doesnt exist
-    if (!sales) {
+    // if product doesnt exist
+    if (!product) {
         res.status(404);
-        throw new Error("Sales not found");
+        throw new Error("Product not found");
     }
-    // Match Sales to its user
-    if (sales.user.toString() !== req.user.id) {
+    // Match product to its user
+    if (product.user.toString() !== req.user.id) {
         res.status(401);
         throw new Error("User not authorized");
     }
@@ -132,8 +132,8 @@ const updateSales = asyncHandler(async (req, res) => {
         };
     }
 
-    // Update Sales
-    const updatedSales = await Sales.findByIdAndUpdate(
+    // Update Product
+    const updatedProduct = await Product.findByIdAndUpdate(
         { _id: id },
         {
             name,
@@ -141,7 +141,7 @@ const updateSales = asyncHandler(async (req, res) => {
             quantity,
             price,
             description,
-            image: Object.keys(fileData).length === 0 ? sales?.image : fileData,
+            image: Object.keys(fileData).length === 0 ? product?.image : fileData,
         },
         {
             new: true,
@@ -149,13 +149,170 @@ const updateSales = asyncHandler(async (req, res) => {
         }
     );
 
-    res.status(200).json(updatedSales);
+    res.status(200).json(updatedProduct);
 });
 
 module.exports = {
-    createSales,
-    getSaless,
-    getSales,
-    deleteSales,
-    updateSales,
+    createProduct,
+    getProducts,
+    getProduct,
+    deleteProduct,
+    updateProduct,
 };
+
+// // Create Sales
+
+// const createSales = asyncHandler(async (req, res) => {
+//     const { name, sku, category, quantity, price, description } = req.body;
+
+//     //   Validation
+//     if (!name || !category || !quantity || !price || !description) {
+//         res.status(400);
+//         throw new Error("Please fill in all fields");
+//     }
+
+//     // Handle Image upload
+//     let fileData = {};
+//     if (req.file) {
+//         // Save image to cloudinary
+//         let uploadedFile;
+//         try {
+//             uploadedFile = await cloudinary.uploader.upload(req.file.path, {
+//                 folder: "Inventory Control",
+//                 resource_type: "image",
+//             });
+//         } catch (error) {
+//             res.status(500);
+//             throw new Error("Image could not be uploaded");
+//         }
+
+//         fileData = {
+//             fileName: req.file.originalname,
+//             filePath: uploadedFile.secure_url,
+//             fileType: req.file.mimetype,
+//             fileSize: fileSizeFormatter(req.file.size, 2),
+//         };
+//     }
+
+//     // Create Sales
+//     const sales = await Sales.create({
+//         user: req.user.id,
+//         name,
+//         sku,
+//         category,
+//         quantity,
+//         price,
+//         description,
+//         image: fileData,
+//     });
+
+//     res.status(201).json(sales);
+// });
+
+// // Get all Saless
+// const getSaless= asyncHandler(async (req, res) => {
+//     const saless = await Sales.find({ user: req.user.id }).sort("-createdAt");
+//     res.status(200).json(saless);
+// });
+
+// // Get single Sales
+// const getSales = asyncHandler(async (req, res) => {
+//     const sales = await Sales.findById(req.params.id);
+//     // if Sales doesnt exist
+//     if (!sales) {
+//         res.status(404);
+//         throw new Error("Sales not found");
+//     }
+//     // Match Sales to its user
+//     if (sales.user.toString() !== req.user.id) {
+//         res.status(401);
+//         throw new Error("User not authorized");
+//     }
+//     res.status(200).json(sales);
+// });
+
+// // Delete Sales
+// const deleteSales = asyncHandler(async (req, res) => {
+//     const sales = await Sales.findById(req.params.id);
+//     // if Sales doesnt exist
+//     if (!sales) {
+//         res.status(404);
+//         throw new Error("Sales not found");
+//     }
+//     // Match Sales to its user
+//     if (sales.user.toString() !== req.user.id) {
+//         res.status(401);
+//         throw new Error("User not authorized");
+//     }
+//     await sales.remove();
+//     res.status(200).json({ message: "Sales deleted." });
+// });
+
+// // Update Sales
+// const updateSales = asyncHandler(async (req, res) => {
+//     const { name, category, quantity, price, description } = req.body;
+//     const { id } = req.params;
+
+//     const sales = await Sales.findById(id);
+
+//     // if Sales doesnt exist
+//     if (!sales) {
+//         res.status(404);
+//         throw new Error("Sales not found");
+//     }
+//     // Match Sales to its user
+//     if (sales.user.toString() !== req.user.id) {
+//         res.status(401);
+//         throw new Error("User not authorized");
+//     }
+
+//     // Handle Image upload
+//     let fileData = {};
+//     if (req.file) {
+//         // Save image to cloudinary
+//         let uploadedFile;
+//         try {
+//             uploadedFile = await cloudinary.uploader.upload(req.file.path, {
+//                 folder: "Inventory Control",
+//                 resource_type: "image",
+//             });
+//         } catch (error) {
+//             res.status(500);
+//             throw new Error("Image could not be uploaded");
+//         }
+
+//         fileData = {
+//             fileName: req.file.originalname,
+//             filePath: uploadedFile.secure_url,
+//             fileType: req.file.mimetype,
+//             fileSize: fileSizeFormatter(req.file.size, 2),
+//         };
+//     }
+
+//     // Update Sales
+//     const updatedSales = await Sales.findByIdAndUpdate(
+//         { _id: id },
+//         {
+//             name,
+//             category,
+//             quantity,
+//             price,
+//             description,
+//             image: Object.keys(fileData).length === 0 ? sales?.image : fileData,
+//         },
+//         {
+//             new: true,
+//             runValidators: true,
+//         }
+//     );
+
+//     res.status(200).json(updatedSales);
+// });
+
+// module.exports = {
+//     createSales,
+//     getSaless,
+//     getSales,
+//     deleteSales,
+//     updateSales,
+// };

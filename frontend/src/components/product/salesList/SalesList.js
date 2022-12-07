@@ -1,24 +1,19 @@
+// const ProductList = ({ products, isLoading }) => {
+
 import React, { useEffect, useState } from "react";
 import { SpinnerImg } from "../../loader/Loader";
 import "./SalesList.scss";
-
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
-
 import Search from "../../search/Search";
-
 import { useDispatch, useSelector } from "react-redux";
 
-
-
-import { FILTER_PRODUCTS, selectFilteredProducts,} from "../../../redux/features/product/filterSlice";
-import { deleteSales, getSaless } from "../../../redux/features/sales/salesSlice";
-
+import { FILTER_PRODUCTS, selectFilteredProducts, } from "../../../redux/features/sales/filtersSlice";
+import { deleteProduct, getProducts, } from "../../../redux/features/sales/salesSlice";
 
 import ReactPaginate from "react-paginate";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
-
 import { Link } from "react-router-dom";
 
 const SalesList = ({ products, isLoading }) => {
@@ -37,8 +32,8 @@ const SalesList = ({ products, isLoading }) => {
 
     const delProduct = async (id) => {
         console.log(id);
-        await dispatch(deleteSales(id));
-        await dispatch(getSaless());
+        await dispatch(deleteProduct(id));
+        await dispatch(getProducts());
     };
 
     const confirmDelete = (id) => {

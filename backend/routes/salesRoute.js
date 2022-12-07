@@ -2,18 +2,18 @@ const express = require("express");
 const router = express.Router();
 const protect = require("../middleWare/authMiddleware");
 const {
-    createSales,
-    getSaless,
-    getSales,
-    deleteSales,
-    updateSales,
+    createProduct,
+    getProducts,
+    getProduct,
+    deleteProduct,
+    updateProduct,
 } = require("../controllers/salesController");
 const { upload } = require("../utils/fileUpload");
 
-router.post("/", protect, upload.single("image"), createSales);
-router.patch("/:id", protect, upload.single("image"), updateSales);
-router.get("/", protect, getSaless);
-router.get("/:id", protect, getSales);
-router.delete("/:id", protect, deleteSales);
+router.post("/", protect, upload.single("image"), createProduct);
+router.patch("/:id", protect, upload.single("image"), updateProduct);
+router.get("/", protect, getProducts);
+router.get("/:id", protect, getProduct);
+router.delete("/:id", protect, deleteProduct);
 
 module.exports = router;

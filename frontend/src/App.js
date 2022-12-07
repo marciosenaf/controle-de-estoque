@@ -16,6 +16,7 @@ import { useDispatch } from "react-redux";
 import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
 import AddProduct from "./pages/addProduct/AddProduct";
+import AddSales from "./pages/addProduct/AddSales";
 import ProductDetail from "./components/product/productDetail/ProductDetail";
 import EditProduct from "./pages/editProduct/EditProduct";
 import Profile from "./pages/profile/Profile";
@@ -51,6 +52,36 @@ function App() {
             <Sidebar>
               <Layout >
                 <Sales/>
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/add-sales"
+          element={
+            <Sidebar>
+              <Layout title="Add New Sales">
+                <AddSales />
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/sales-detail/:id"
+          element={
+            <Sidebar>
+              <Layout title="Sales Detail">
+                <ProductDetail />
+              </Layout>
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/edit-sales/:id"
+          element={
+            <Sidebar>
+              <Layout title="Edit Sales">
+                <EditProduct />
               </Layout>
             </Sidebar>
           }
