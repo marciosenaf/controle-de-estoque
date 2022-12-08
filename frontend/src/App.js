@@ -15,10 +15,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
-import AddProduct from "./pages/addProduct/AddProduct";
-import AddSales from "./pages/addProduct/AddSales";
+import AddProduct from "./pages/add/AddProduct";
+import AddSales from "./pages/add/AddSales";
+import SalesDetail from "./components/sales/salesDetail/SalesDetail";
 import ProductDetail from "./components/product/productDetail/ProductDetail";
-import EditProduct from "./pages/editProduct/EditProduct";
+import EditProduct from "./pages/edit/EditProduct";
+import EditSales from "./pages/edit/EditSales";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import Contact from "./pages/contact/Contact";
@@ -71,7 +73,7 @@ function App() {
           element={
             <Sidebar>
               <Layout title="Sales Detail">
-                <ProductDetail />
+                <SalesDetail />
               </Layout>
             </Sidebar>
           }
@@ -81,7 +83,7 @@ function App() {
           element={
             <Sidebar>
               <Layout title="Edit Sales">
-                <EditProduct />
+                <EditSales/>
               </Layout>
             </Sidebar>
           }
