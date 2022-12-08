@@ -1,8 +1,7 @@
-// const ProductList = ({ products, isLoading }) => {
-
 import React, { useEffect, useState } from "react";
 import { SpinnerImg } from "../../loader/Loader";
 import "./SalesList.scss";
+
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { AiOutlineEye } from "react-icons/ai";
 import Search from "../../search/Search";
@@ -81,7 +80,7 @@ const SalesList = ({ products, isLoading }) => {
             <div className="table">
                 <div className=" --flex-dir-column">
                     <span>
-                        <h4>Items</h4>
+                        <h4 className="--mt">Sales </h4>
                     </span>
                     <span>
                         <Search
@@ -129,12 +128,12 @@ const SalesList = ({ products, isLoading }) => {
                                             </td>
                                             <td className="icons">
                                                 <span>
-                                                    <Link to={`/product-detail/${_id}`}>
+                                                    <Link to={`/sales-detail/${_id}`}>
                                                         <AiOutlineEye size={25} color={"purple"} />
                                                     </Link>
                                                 </span>
                                                 <span>
-                                                    <Link to={`/edit-product/${_id}`}>
+                                                    <Link to={`/edit-sales/${_id}`}>
                                                         <FaEdit size={20} color={"green"} />
                                                     </Link>
                                                 </span>

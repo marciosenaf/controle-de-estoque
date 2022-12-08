@@ -3,7 +3,8 @@ import "./SalesSummary.scss";
 
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BsCart4, BsCartX } from "react-icons/bs";
-import { BiCategory } from "react-icons/bi";
+import { BiCategory } from "react-icons/bi"
+import {IoStatsChart} from "react-icons/io5"
 
 import InfoBox from "../../infoBox/InfoBox";
 import { useDispatch, useSelector } from "react-redux";
@@ -42,7 +43,7 @@ const SalesSummary = ({ products }) => {
 
   return (
     <div className="product-summary">
-      <h4 className="--mt" >Stats</h4> 
+      <h4 className="--mt" >Stats <IoStatsChart/></h4> 
       <div className="info-summary">
         <InfoBox
           icon={productIcon}

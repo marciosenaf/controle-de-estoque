@@ -37,8 +37,8 @@
 // export default Sales;
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import SalesList from "../../components/product/salesList/SalesList";
-import SalesSummary from "../../components/product/salesSummary/SalesSummary";
+import SalesList from "../../components/sales/salesList/SalesList";
+import SalesSummary from "../../components/sales/salesSummary/SalesSummary";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
 import { getProducts } from "../../redux/features/sales/salesSlice";

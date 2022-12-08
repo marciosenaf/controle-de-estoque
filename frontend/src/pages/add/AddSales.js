@@ -83,7 +83,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
-import SalesForm from "../../components/product/salesForm/SalesForm";
+import SalesForm from "../../components/sales/salesForm/SalesForm";
 import {
     createProduct,
     selectIsLoading,
