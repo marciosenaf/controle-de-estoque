@@ -1,22 +1,16 @@
 import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import {FaBoxes} from "react-icons/fa"
-import {MdOutlineInventory} from "react-icons/md"
+// import {MdOutlineInventory} from "react-icons/md"
 import {GiCardboardBoxClosed} from "react-icons/gi"
 // import { BiImageAdd } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { AiFillEdit } from "react-icons/ai";
 import {BsCashCoin} from "react-icons/bs"
-import {FaCashRegister} from "react-icons/fa"
 const menu = [
   {
     title: "Sales",
     icon: <BsCashCoin />,
     path: "/sales",
-  },
-  {
-    title: "Add Sales",
-    icon: <FaCashRegister />,
-    path: "/add-sales",
   },
   {
     title: "Inventory",
