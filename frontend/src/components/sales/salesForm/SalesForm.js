@@ -161,7 +161,7 @@ const SalesForm = ({
 }) => {
     return (
         <div className="add-sales">
-                <form onSubmit={saveProduct}>
+                <form className="add-sales" onSubmit={saveProduct}>
                     <input
                         type="text"
                         placeholder="Product name"
@@ -232,11 +232,10 @@ const SalesForm = ({
                         // value={product?.quantity}
                         onChange={handleInputChange}
                     />
-                    <button type="submit" className="--btn --btns-primary-sales">
-                        Save Product
-                    </button>
                 </form>
+                <button type="submit" className="--btn --btns-primary-sales">Save Product</button>
         </div>
+
     );
 };
 

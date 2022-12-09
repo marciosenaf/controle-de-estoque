@@ -64,20 +64,21 @@ const AddSales = () => {
 
     return (
         <div>
-            {isLoading && <Loader />}
-            <h3 className="--mt"></h3>
-            <SalesForm
-                product={product}
-                productImage={productImage}
-                imagePreview={imagePreview}
-                description={description}
-                setDescription={setDescription}
-                handleInputChange={handleInputChange}
-                handleImageChange={handleImageChange}
-                saveProduct={saveProduct}
-            />
-        </div>
-    );
+            <hr/>
+                {isLoading && <Loader />}
+                <h4 className="--mt">Add Sales</h4>
+                <SalesForm
+                    product={product}
+                    productImage={productImage}
+                    imagePreview={imagePreview}
+                    description={description}
+                    setDescription={setDescription}
+                    handleInputChange={handleInputChange}
+                    handleImageChange={handleImageChange}
+                    saveProduct={saveProduct}
+                />
+            </div>
+            );
 };
 
-export default AddSales;
+            export default AddSales;
