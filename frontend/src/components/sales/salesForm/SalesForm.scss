@@ -76,11 +76,13 @@
 
 
 .add-sales {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     column-gap: 20px;
     flex-wrap: wrap;
     max-width: 1200px;
+    align-items: flex-start;
+
 
 
 
@@ -150,16 +152,19 @@
 }
 
 .--btns-primary-sales{
+    padding: 9px 47px;
+    margin-top: 6px;
     border-radius: 8px;
-    font-size: 17px ;
+    font-size: 15px ;
     color: #fff;
-    border-color: #fff;
+    border-color: rgb(0, 0, 0);
     background: var(--dark-blue);
     border-radius: 8px;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
 
 }
 .--btns-primary-sales:hover {
     color: var(--dark-blue);
     background-color:#fff;
-    font-size: 18px;
+    font-size: 14px;
 }

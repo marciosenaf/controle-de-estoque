@@ -205,13 +205,6 @@ const SalesForm = ({
                         onChange={handleInputChange}
                     />
                     <input
-                        type="text"
-                        placeholder="Note"
-                        name="quantity"
-                        // value={product?.quantity}
-                        onChange={handleInputChange}
-                    />
-                    <input
                         type="number"
                         placeholder="Thing"
                         name="quantity"
@@ -232,8 +225,9 @@ const SalesForm = ({
                         // value={product?.quantity}
                         onChange={handleInputChange}
                     />
-                </form>
                 <button type="submit" className="--btn --btns-primary-sales">Save Product</button>
+
+                </form>
         </div>
 
     );

@@ -43,7 +43,7 @@ const SalesSummary = ({ products }) => {
 
   return (
     <div className="product-summary">
-      <h4 className="--mt" >Stats <IoStatsChart/></h4> 
+      <h4 className="--mt">Stats</h4> 
       <div className="info-summary">
         <InfoBox
           icon={productIcon}
