@@ -17,10 +17,8 @@ const ProductForm = ({
 }) => {
     return (
         <div className="add-product">
-            <Card cardClass={"card"}>
                 <form onSubmit={saveProduct}>
                     <Card cardClass={"group"}>
-                        <label>Product Image</label>
                         <code className="--color-dark">
                             Supported Formats: jpg, jpeg, png
                         </code>
@@ -38,7 +36,6 @@ const ProductForm = ({
                             <p className="noimage">No image set for this poduct.</p>
                         )}
                     </Card>
-                    <label>Product Name:</label>
                     <input
                         type="text"
                         placeholder="Product name"
@@ -47,7 +44,6 @@ const ProductForm = ({
                         onChange={handleInputChange}
                     />
 
-                    <label>Product Category:</label>
                     <input
                         type="text"
                         placeholder="Product Category"
@@ -56,7 +52,6 @@ const ProductForm = ({
                         onChange={handleInputChange}
                     />
 
-                    <label>Product Price:</label>
                     <input
                         type="number"
                         placeholder="Product Price"
@@ -65,7 +60,6 @@ const ProductForm = ({
                         onChange={handleInputChange}
                     />
 
-                    <label>Product Quantity:</label>
                     <input
                         type="number"
                         placeholder="Product Quantity"
@@ -74,7 +68,6 @@ const ProductForm = ({
                         onChange={handleInputChange}
                     />
 
-                    <label>Product Description:</label>
                     <div className="editor">
                         <ReactQuill
                             theme="snow"
@@ -91,7 +84,7 @@ const ProductForm = ({
                         </button>
                     </div>
                 </form>
-            </Card>
+            
         </div>
     );
 };

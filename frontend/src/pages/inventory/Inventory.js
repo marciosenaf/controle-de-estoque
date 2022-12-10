@@ -5,6 +5,7 @@ import ProductSummary from "../../components/product/productSummary/ProductSumma
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
 import { getProducts } from "../../redux/features/product/productSlice";
+import AddProduct from "../add/AddProduct"
 
 const Inventory = () => {
   useRedirectLoggedOutUser("/login");
@@ -28,6 +29,7 @@ const Inventory = () => {
   return (
     <div>
       <ProductSummary products={products} />
+      <AddProduct/>
       <ProductList products={products} isLoading={isLoading} />
     </div>
   );
