@@ -98,7 +98,7 @@ const EditProfile = () => {
         <form className="--form-control --m" onSubmit={saveProfile}>
           <span className="profile-data">
             <p>
-              <label>Name:</label>
+              {/* <label>Name:</label> */}
               <input
                 type="text"
                 name="name"
@@ -107,13 +107,9 @@ const EditProfile = () => {
               />
             </p>
             <p>
-              <label>Email:</label>
               <input type="text" name="email" value={profile?.email} disabled />
-              <br />
-              <code>Email cannot be changed.</code>
             </p>
             <p>
-              <label>Phone:</label>
               <input
                 type="text"
                 name="phone"
@@ -122,7 +118,6 @@ const EditProfile = () => {
               />
             </p>
             <p>
-              <label>Bio:</label>
               <input
                 name="bio"
                 value={profile?.bio}
@@ -132,7 +127,6 @@ const EditProfile = () => {
               ></input>
             </p>
             <p>
-              <label>Photo:</label>
               <input type="file" name="image" onChange={handleImageChange} />
             </p>
             <div>

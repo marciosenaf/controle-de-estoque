@@ -1,5 +1,5 @@
 .add-sales {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     column-gap: 20px;
     flex-wrap: wrap;
@@ -29,15 +29,10 @@
             border-radius: 8px;
             margin-bottom: 5px;
             margin-top: 5px;
-            box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
+            // box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
 
         }
     }
-}
-
-.group1 {
-    border: 3px solid;
-    padding: 11px 0px;
 }
 
 
@@ -77,11 +72,11 @@
     border-color: rgb(0, 0, 0);
     background: var(--dark-blue);
     border-radius: 8px;
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
+    // box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
 
 }
 .--btns-primary-sales:hover {
     color: var(--dark-blue);
     background-color:#fff;
-    font-size: 14px;
+    font-size: 15px;
 }

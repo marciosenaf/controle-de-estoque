@@ -17,25 +17,8 @@ const ProductForm = ({
 }) => {
     return (
         <div className="add-product">
-                <form onSubmit={saveProduct}>
-                    <Card cardClass={"group"}>
-                        <code className="--color-dark">
-                            Supported Formats: jpg, jpeg, png
-                        </code>
-                        <input
-                            type="file"
-                            name="image"
-                            onChange={(e) => handleImageChange(e)}
-                        />
-
-                        {imagePreview != null ? (
-                            <div className="image-preview">
-                                <img src={imagePreview} alt="product" />
-                            </div>
-                        ) : (
-                            <p className="noimage">No image set for this poduct.</p>
-                        )}
-                    </Card>
+            <form onSubmit={saveProduct}>
+                <div className="inputs">
                     <input
                         type="text"
                         placeholder="Product name"
@@ -68,23 +51,38 @@ const ProductForm = ({
                         onChange={handleInputChange}
                     />
 
-                    <div className="editor">
-                        <ReactQuill
-                            theme="snow"
-                            value={description}
-                            onChange={setDescription}
-                            modules={ProductForm.modules}
-                            formats={ProductForm.formats}
-                        />
-                    </div>
+                    <button type="submit" className="--btn --btns-primary-products">
+                        Save Product
+                    </button>
+                </div>
 
-                    <div className="--my">
-                        <button type="submit" className="--btn --btns-primary">
-                            Save Product
-                        </button>
+                <div className="editor">
+                    <ReactQuill
+                        theme="snow"
+                        value={description}
+                        onChange={setDescription}
+                        modules={ProductForm.modules}
+                        formats={ProductForm.formats}
+                    />
+                </div>
+{/* 
+                <div className="file">
+                <input
+                    type="file"
+                    name="image"
+                    onChange={(e) => handleImageChange(e)}
+                />
+
+                {imagePreview != null ? (
+                    <div className="image-preview">
+                        <img src={imagePreview} alt="product" />
                     </div>
-                </form>
-            
+                ) : (
+                    <p className="noimage">No image set for this poduct.</p>
+                )}
+                </div> */}
+            </form>
+
         </div>
     );
 };

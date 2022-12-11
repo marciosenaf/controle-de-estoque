@@ -1,16 +1,25 @@
 .add-product {
-  margin-bottom: 5rem;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+margin-bottom: 5rem;
 
+  form{
+    display: flex;
+    align-items: baseline;
+  }
+
+  .inputs{
+    margin-bottom: 1rem;
+    // display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 200px;
+  }
   form {
     label {
       display: block;
       font-size: 1.4rem;
       font-weight: 500;
       color: white;
-      margin-bottom: 10px;
 
     }
     input[type="text"],
@@ -19,22 +28,16 @@
     input[type="email"],
     select,
     input[type="password"] {
-      display: block;
-      font-size: 1.6rem;
       font-weight: 300;
       padding: 1rem;
-      margin: 1rem auto;
-      width: 100%;
       border: 1px solid #777;
-      border-radius: 3px;
-      outline: none;
+      border-radius: 8px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      // box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
+
     }
   }
-}
-
-.group {
-  border: 1px solid var(--dark-blue);
-  padding: 5px;
 }
 
 
@@ -58,9 +61,36 @@
 }
 
 .editor{
-  background-color: rgb(255, 255, 255);
+  width: clamp(400px, 100%, 400px,);
+background-color: rgb(255, 255, 255);
+// box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
+border: 1px solid #777;
+border-radius: 2px;
 }
+
+// .file{
+//   margin-left: 10px;
+// }
 
 .noimage{
   color: #fff;
+}
+
+
+.--btns-primary-products{
+  padding: 9px 47px;
+  margin-top: 6px;
+  border-radius: 8px;
+  font-size: 15px ;
+  color: #fff;
+  border-color: rgb(0, 0, 0);
+  background: var(--dark-blue);
+  border-radius: 8px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
+
+}
+.--btns-primary-products:hover {
+  color: var(--dark-blue);
+  background-color:#fff;
+  font-size: 15px;
 }
