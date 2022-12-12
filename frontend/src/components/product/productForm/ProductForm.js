@@ -65,15 +65,14 @@ const ProductForm = ({
                         formats={ProductForm.formats}
                     />
                 </div>
-{/* 
-                <div className="file">
-                <input
-                    type="file"
-                    name="image"
-                    onChange={(e) => handleImageChange(e)}
-                />
 
-                {imagePreview != null ? (
+                {/* <div className="file"> */}
+                <p>
+                <label className="image"  for="image" >Selecione a Imagem</label>
+                <input type="file" name="image" id="image" onChange={(e) => handleImageChange(e)}/>
+                </p>
+
+                {/* {imagePreview != null ? (
                     <div className="image-preview">
                         <img src={imagePreview} alt="product" />
                     </div>

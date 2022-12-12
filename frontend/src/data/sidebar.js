@@ -1,7 +1,7 @@
 import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import {FaBoxes} from "react-icons/fa"
 // import {MdOutlineInventory} from "react-icons/md"
-import {GiCardboardBoxClosed} from "react-icons/gi"
+// import {GiCardboardBoxClosed} from "react-icons/gi"
 // import { BiImageAdd } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { AiFillEdit } from "react-icons/ai";
@@ -16,11 +16,6 @@ const menu = [
     title: "Inventory",
     icon: <FaBoxes/>,
     path: "/inventory",
-  },
-  {
-    title: "Add Product",
-    icon: <GiCardboardBoxClosed />,
-    path: "/add-product",
   },
   {
     title: "Account",

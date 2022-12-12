@@ -97,8 +97,11 @@ const EditProfile = () => {
         </span>
         <form className="--form-control --m" onSubmit={saveProfile}>
           <span className="profile-data">
+          <p>
+              <label for="image" >Selecione a Imagem</label>
+              <input type="file" name="image" id="image" onChange={handleImageChange} />
+            </p>
             <p>
-              {/* <label>Name:</label> */}
               <input
                 type="text"
                 name="name"
@@ -125,9 +128,6 @@ const EditProfile = () => {
                 cols="30"
                 rows="10"
               ></input>
-            </p>
-            <p>
-              <input type="file" name="image" onChange={handleImageChange} />
             </p>
             <div>
               <button className="--btn --btns-primary">Edit Profile</button>

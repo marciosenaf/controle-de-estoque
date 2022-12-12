@@ -4,17 +4,14 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 8px;
-    transform: translateY(0);
-    transition: all 0.3s;
+    transition: .5s;
 
     &:hover {
         cursor: pointer;
-        transform: translateY(-5px);
     }
 }
 
 .button123:hover {
     color: var(--dark-blue);
     background-color: #fff;
-    font-size: 13px;
 }

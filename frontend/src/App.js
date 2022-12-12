@@ -89,16 +89,6 @@ function App() {
           }
         />
         <Route
-          path="/add-product"
-          element={
-            <Sidebar>
-              <Layout title="Add New Product">
-                <AddProduct />
-              </Layout>
-            </Sidebar>
-          }
-        />
-        <Route
           path="/product-detail/:id"
           element={
             <Sidebar>
