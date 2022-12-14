@@ -59,6 +59,7 @@ const Login = () => {
       {isLoading && <Loader />}
       <Card>
         <div className={styles.form}>
+          <Link to="/">- Home</Link>
           <div className="--flex-center">
             <BiLogIn size={35} color="#999" />
           </div>
@@ -85,11 +86,9 @@ const Login = () => {
               Login
             </button>
           </form>
-          <Link className="forgotpass" to="/forgot">Forgot Password</Link>
+          
           <span className={styles.register}>
-            <Link to="/">Home</Link>
-            <p> &nbsp; Don't have an account? &nbsp;</p>
-            <Link to="/register">Register</Link>
+          <Link className="forgotpass" to="/forgot">Forgot Password</Link>            
           </span>
         </div>
       </Card>

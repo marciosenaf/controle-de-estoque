@@ -22,12 +22,12 @@ const menu = [
     icon: <FaRegChartBar />,
     childrens: [
       {
-        title: "Profile",
+        title: "- Profile",
         icon: <CgProfile />,
         path: "/profile",
       },
       {
-        title: "Edit Profile",
+        title: "- Edit Profile",
         icon: <AiFillEdit />,
         path: "/edit-profile",
       },
