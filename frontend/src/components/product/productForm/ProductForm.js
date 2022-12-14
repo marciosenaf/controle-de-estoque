@@ -1,7 +1,6 @@
 import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import Card from "../../card/Card";
 
 import "./ProductForm.scss";
 
@@ -66,18 +65,21 @@ const ProductForm = ({
                     />
                 </div>
 
+                
+                <div className="imagefile">
                 <p>
                 <label className="image"  for="image" >Selecione a Imagem</label>
                 <input type="file" name="image" id="image" onChange={(e) => handleImageChange(e)}/>
                 </p>
-
                 {imagePreview != null ? (
                     <div className="image-preview">
                         <img src={imagePreview} alt="product" />
                     </div>
                 ) : (
-                    <p className="noimage">No image set for this poduct.</p>
+                    <p className="noimage"></p>
                 )}
+                </div>
+
             </form>
 
         </div>
