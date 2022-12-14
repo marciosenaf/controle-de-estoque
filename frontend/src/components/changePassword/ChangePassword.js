@@ -41,7 +41,6 @@ const ChangePassword = () => {
   return (
     <div className="change-password">
       <Card cardClass={"password-card"}>
-        <h3>Change Password</h3>
         <form onSubmit={changePass} className="--form-control">
           <input
             type="password"

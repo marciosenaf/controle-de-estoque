@@ -1,20 +1,23 @@
 .add-product {
 margin-bottom: 5rem;
 
+
   form{
     display: flex;
-    align-items: baseline;
-  }
-
-  .inputs{
-    margin-bottom: 1rem;
-    // display: flex;
     column-gap: 20px;
     flex-wrap: wrap;
     align-items: flex-start;
+  }
+
+  .inputs{
+    align-items: flex-start;
     max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap:5px 17px;
   }
   form {
+
     label {
       display: block;
       font-size: 1.4rem;
@@ -31,8 +34,7 @@ margin-bottom: 5rem;
       padding: 1rem;
       border: 1px solid #777;
       border-radius: 8px;
-      margin-bottom: 5px;
-      margin-top: 5px;
+      margin-bottom: 15px;
       // box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
 
     }
@@ -60,7 +62,7 @@ margin-bottom: 5rem;
 }
 
 .editor{
-  width: clamp(400px, 100%, 400px,);
+  width: clamp(500px, 100%, 400px,);
 background-color: rgb(255, 255, 255);
 // box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.434);
 border: 1px solid #777;
@@ -71,7 +73,7 @@ input[type="file"] {
   display: none;
 }
 .noimage{
-  color: #fff;
+  color: #333;
 }
 
 .image{
@@ -98,7 +100,7 @@ background: #fff;
 
 .--btns-primary-products{
   padding: 9px 47px;
-  margin-top: 6px;
+  // margin-top: 6px;
   border-radius: 8px;
   font-size: 15px ;
   color: #fff;

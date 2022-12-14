@@ -335,7 +335,7 @@ p {
 }
 
 .--btns-primary {
-  margin-top: 10px;
+  margin-top: 6px;
   color: #fff;
   border-color: #fff;
   background:var(--dark-blue);
@@ -385,6 +385,7 @@ p {
 }
 
 .--form-control input {
+  margin-bottom: 7px;
   background-color: #fff;
   font-size: 1.6rem;
   font-weight: 300;
