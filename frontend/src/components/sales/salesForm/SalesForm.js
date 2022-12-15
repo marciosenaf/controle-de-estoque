@@ -1,6 +1,13 @@
 import React from "react";
 import "react-quill/dist/quill.snow.css";
 import "./SalesForm.scss";
+import Select from "react-select"
+
+const suppliers = [
+    { label: 'Pix', value: 'Pix' },
+    { label: 'Cartão', value: 'Cartão' },
+    { label: 'Dinheiro', value: 'Dinheiro' },
+]
 
 const SalesForm = ({
     product,
@@ -50,20 +57,27 @@ const SalesForm = ({
                     // value={product?.quantity}
                     onChange={handleInputChange}
                 />
-                <input
+                {/* <input
                     type="number"
                     placeholder="Amount Paid"
                     name="quantity"
                     // value={product?.quantity}
                     onChange={handleInputChange}
-                />
+                /> */}
+                <div className="suppliers-container">
+                    <Select
+                        className="custom-border"
+                        options={suppliers} 
+                    />
+                </div>
                 <input
-                    type="number"
+                    type="text"
                     placeholder="Received Payment"
                     name="quantity"
                     // value={product?.quantity}
                     onChange={handleInputChange}
                 />
+
                 <input
                     type="number"
                     placeholder="Thing"
