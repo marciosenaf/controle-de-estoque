@@ -27,18 +27,8 @@ const menu = [
   {
     title: "Settings",
     icon: <IoSettingsSharp />,
-    childrens: [
-      {
-        title: "- Edit Profile",
-        icon: <AiFillEdit />,
-        path: "/edit-profile",
-      },
-      {
-        title: "Report Bug",
-        icon: <FaCommentAlt />,
-        path: "/contact-us",
-      },
-    ]
+    path: "/edit-profile"
+
   },
 
 ];

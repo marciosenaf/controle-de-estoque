@@ -7,7 +7,6 @@ import { selectUser } from "../../redux/features/auth/authSlice";
 import "./Profile.scss";
 import { toast } from "react-toastify";
 import { updateUser } from "../../services/authService";
-import ChangePassword from "../../components/changePassword/ChangePassword";
 
 const EditProfile = () => {
   const navigate = useNavigate();
@@ -136,7 +135,6 @@ const EditProfile = () => {
         </form>
       </Card>
       <br />
-      <ChangePassword />
     </div>
   );
 };

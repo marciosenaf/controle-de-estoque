@@ -54,11 +54,6 @@ const Profile = () => {
               <p>
                 <b className="--color-white">Bio : </b> {profile?.bio}
               </p>
-              <div>
-                <Link to="/edit-profile">
-                  <button className="--btn --btns-primary">Edit Profile</button>
-                </Link>
-              </div>
             </span>
           </Card>
         )}
