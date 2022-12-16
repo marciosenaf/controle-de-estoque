@@ -38,7 +38,8 @@ const ProductList = ({ products, isLoading }) => {
     confirmAlert({
       title: "Delete Product",
       message: "Are you sure you want to delete this product.",
-      buttons: [
+      buttons:
+      [
         {
           label: "Delete",
           onClick: () => delProduct(id),

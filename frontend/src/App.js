@@ -16,7 +16,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
-import ChangePassword from "./components/changePassword/ChangePassword";
+import ChangePassword from "./pages/changePassword/ChangePassword";
 import AddProduct from "./pages/add/AddProduct";
 import AddSales from "./pages/add/AddSales";
 import SalesDetail from "./components/sales/salesDetail/SalesDetail";
@@ -50,6 +50,27 @@ function App() {
         <Route path="/forgot" element={<Forgot />} />
         <Route path="/resetpassword/:resetToken" element={<Reset />} />
 
+
+        <Route
+          path="/edit-profile"
+          element={
+            <SidebarConfig>
+              <Layout title="Edit Profile">
+                <EditProfile />
+              </Layout>
+            </SidebarConfig>
+          }
+        />
+        <Route
+          path="/change-password"
+          element={
+            <SidebarConfig>
+              <Layout title="Change Password">
+                <ChangePassword />
+              </Layout>
+            </SidebarConfig>
+          }
+        />
         <Route
           path="/contact-us"
           element={
@@ -61,25 +82,15 @@ function App() {
           }
         />
         <Route
-          path="/edit-profile"
+          path="/how-to-use"
           element={
             <SidebarConfig>
-            <Layout title="Edit Profile">
-              <EditProfile />
-            </Layout>
+              <Layout title="How to Use">
+              </Layout>
             </SidebarConfig>
           }
         />
-        <Route
-          path="/change-password"
-          element={
-            <SidebarConfig>
-            <Layout title="Change Password">
-              <ChangePassword />
-            </Layout>
-            </SidebarConfig>
-          }
-        />
+
         <Route
           path="/sales"
           element={

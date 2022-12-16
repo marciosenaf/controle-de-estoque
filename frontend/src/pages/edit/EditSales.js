@@ -1,3 +1,4 @@
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -14,6 +15,7 @@ import {
 } from "../../redux/features/sales/salesSlice";
 
 const EditSales = () => {
+    useRedirectLoggedOutUser("/login");
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();

@@ -1,3 +1,4 @@
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useState } from "react";
 import "./ChangePassword.scss";
 import { toast } from "react-toastify";
@@ -12,6 +13,7 @@ const initialState = {
 };
 
 const ChangePassword = () => {
+  useRedirectLoggedOutUser("/login");
   const navigate = useNavigate();
   const [formData, setformData] = useState(initialState);
   const { oldPassword, password, password2 } = formData;

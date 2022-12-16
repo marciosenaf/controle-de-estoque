@@ -1,3 +1,4 @@
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +9,9 @@ import "./Profile.scss";
 import { toast } from "react-toastify";
 import { updateUser } from "../../services/authService";
 
+
 const EditProfile = () => {
+  useRedirectLoggedOutUser("/login");
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const user = useSelector(selectUser);
@@ -37,7 +40,7 @@ const EditProfile = () => {
 
   const handleImageChange = (e) => {
     setProfileImage(e.target.files[0]);
-    
+
   };
 
   const saveProfile = async (e) => {
@@ -64,7 +67,7 @@ const EditProfile = () => {
         );
         const imgData = await response.json();
         imageURL = imgData.url.toString();
-        
+
         // Save Profile
         const formData = {
           name: profile.name,
@@ -78,7 +81,7 @@ const EditProfile = () => {
         navigate("/profile");
         setIsLoading(false);
       }
-      
+
     } catch (error) {
       console.log(error);
       setIsLoading(false);
@@ -96,7 +99,7 @@ const EditProfile = () => {
         </span>
         <form className="--form-control --m" onSubmit={saveProfile}>
           <span className="profile-data">
-          <p>
+            <p>
               <label for="image" >Selecione a Imagem</label>
               <input type="file" name="image" id="image" onChange={handleImageChange} />
             </p>
@@ -121,6 +124,7 @@ const EditProfile = () => {
             </p>
             <p>
               <input
+                type="text"
                 name="bio"
                 value={profile?.bio}
                 onChange={handleInputChange}
@@ -129,7 +133,7 @@ const EditProfile = () => {
               ></input>
             </p>
             <div>
-              <button className="--btn --btns-primary">Edit Profile</button>
+              <button className="--btn btns">Edit Profile</button>
             </div>
           </span>
         </form>

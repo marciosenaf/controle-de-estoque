@@ -1,21 +1,28 @@
-import { IoSettingsSharp } from "react-icons/io5"
-
+import {FaUserEdit, FaCommentAlt} from "react-icons/fa"
+import {RiLockPasswordFill} from "react-icons/ri"
+import {MdOutlineMenuBook} from "react-icons/md"
 const menu = [
     {
         title: "Edit Profile",
-        icon: <IoSettingsSharp />,
+        icon: <FaUserEdit/>,
         path: "/edit-profile",
     },
     {
+        title: "Change Password",
+        icon: <RiLockPasswordFill/>,
+        path: "/change-password",
+    },
+    {
         title: "Contact",
-        icon: <IoSettingsSharp />,
+        icon: <FaCommentAlt/>,
         path: "/contact-us",
     },
     {
-        title: "Change Password",
-        icon: <IoSettingsSharp />,
-        path: "/change-password",
+        title: "how to use",
+        icon: <MdOutlineMenuBook/>,
+        path: "/how-to-use",
     },
+
 
 ]
 export default menu;
