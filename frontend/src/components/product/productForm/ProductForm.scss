@@ -1,5 +1,5 @@
 .add-product {
-margin-bottom: 5rem;
+margin-bottom: 3rem;
 margin-left: 10px;
 
 
@@ -17,12 +17,11 @@ margin-left: 10px;
     max-width: 200px;
     display: flex;
     flex-direction: column;
-    gap:5px 17px;
   }
   form {
 
     label {
-      padding: 5px 37px;
+      padding: 4.4px 37px;
       display: block;
       font-size: 1.4rem;
       font-weight: 500;
@@ -51,8 +50,8 @@ margin-left: 10px;
 }
 
 .image-preview {
-  width: 54%;
-  height: 54%;
+  width: 55%;
+  height: 55%;
   max-width: 420px;
   max-height: 230px;
   border-radius: 3px;
@@ -105,7 +104,7 @@ background: #fff;
 
 
 .--btns-primary-products{
-  padding: 9px 47px;
+  padding: 8.6px 47px;
   border-radius: 8px;
   font-size: 15px ;
   color: #fff;

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
+import "./EditSales.scss"
+import Card from "../../components/card/Card";
 import ProductForm from "../../components/sales/salesForm/SalesForm";
 import {
     getProduct,
@@ -74,7 +76,8 @@ const EditSales = () => {
         <div>
             {isLoading && <Loader />}
             <h3 className="--mt"></h3>
-            <ProductForm
+            <div className="edit-sales">
+            <ProductForm className="meuovo"
                 product={product}
                 productImage={productImage}
                 imagePreview={imagePreview}
@@ -84,6 +87,9 @@ const EditSales = () => {
                 handleImageChange={handleImageChange}
                 saveProduct={saveProduct}
             />
+            </div>
+
+
         </div>
     );
 };

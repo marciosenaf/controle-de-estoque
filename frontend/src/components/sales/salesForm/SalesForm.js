@@ -20,7 +20,7 @@ const SalesForm = ({
     saveProduct,
 }) => {
     return (
-        <div className="add-sales">
+        <div className="add">
             <form className="add-sales" onSubmit={saveProduct}>
                 <input
                     type="text"

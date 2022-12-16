@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import ProductForm from "../../components/product/productForm/ProductForm";
+import "./EditProduct.scss"
 import {
   getProduct,
   getProducts,
@@ -74,6 +75,7 @@ const EditProduct = () => {
     <div>
       {isLoading && <Loader />}
       <h3 className="--mt"></h3>
+      <div className="edit">
       <ProductForm
         product={product}
         productImage={productImage}
@@ -84,6 +86,7 @@ const EditProduct = () => {
         handleImageChange={handleImageChange}
         saveProduct={saveProduct}
       />
+      </div>
     </div>
   );
 };
