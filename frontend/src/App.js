@@ -47,7 +47,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot" element={<Forgot />} />
         <Route path="/resetpassword/:resetToken" element={<Reset />} />
-
+        
         <Route
           path="/sales"
           element={
@@ -121,11 +121,9 @@ function App() {
         <Route
           path="/edit-profile"
           element={
-            <Sidebar>
               <Layout title="Edit Profile">
                 <EditProfile />
               </Layout>
-            </Sidebar>
           }
         />
         <Route
