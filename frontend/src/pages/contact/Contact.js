@@ -1,3 +1,4 @@
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useState } from "react";
 import Card from "../../components/card/Card";
 import "./Contact.scss";
@@ -8,6 +9,7 @@ import axios from "axios";
 import { BACKEND_URL } from "../../services/authService";
 
 const Contact = () => {
+  useRedirectLoggedOutUser("/login");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const data = {
@@ -28,8 +30,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <h3 className="--mt"></h3>
+    <div className="contact --my2">
       <div className="section">
         <form onSubmit={sendEmail}>
           <Card cardClass="card">
@@ -50,7 +51,7 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <button className="--btn --btn-primary">Send Message</button>
+            <button className="--btn botao">Send Message</button>
           </Card>
         </form>
 
