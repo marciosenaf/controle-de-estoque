@@ -67,7 +67,7 @@ const ProductForm = ({
                 
                 <div className="imagefile">
                 <p>
-                <label className="image"  for="image" >Selecione a Imagem</label>
+                <label className="image"  for="image" >Select Image</label>
                 <input type="file" name="image" id="image" onChange={(e) => handleImageChange(e)}/>
                 </p>
                 {imagePreview != null ? (

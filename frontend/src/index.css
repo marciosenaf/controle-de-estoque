@@ -394,7 +394,7 @@ p {
   font-weight: 300;
   padding: 8px 1rem;
   border: 1px solid #777;
-  border-radius: 3px;
+  border-radius: 8px;
   outline: none;
   display: block;
 }

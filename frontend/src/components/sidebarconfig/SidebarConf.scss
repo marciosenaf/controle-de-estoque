@@ -48,7 +48,7 @@ main {
 .sidebar-item {
   padding: 0.75em 0em;
   display: block;
-  border-radius: 5px;
+  border-radius: 8px;
   // border-bottom: 2px solid rgb(189, 189, 189);
   // background-color: rgba(113, 113, 113, 0.158);
   transition: background-color 0.15s;
@@ -105,7 +105,7 @@ main {
 }
 
 .s-child {
-  border-radius: 3px;
+  border-radius: 8px;
   margin-top: 5px;
 }
 

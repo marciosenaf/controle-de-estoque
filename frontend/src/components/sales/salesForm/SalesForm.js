@@ -23,6 +23,7 @@ const SalesForm = ({
         <div className="add">
             <form className="add-sales" onSubmit={saveProduct}>
                 <input
+                    className="asd"
                     type="text"
                     placeholder="Product name"
                     name="name"
@@ -30,6 +31,7 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 />
                 <input
+                    className="asd"
                     type="text"
                     placeholder="Product Category"
                     name="category"
@@ -37,6 +39,7 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 />
                 <input
+                    className="asd"
                     type="number"
                     placeholder="Product Price"
                     name="price"
@@ -44,6 +47,7 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 />
                 <input
+                    className="asd"
                     type="number"
                     placeholder="Product Quantity"
                     name="Quantity"
@@ -51,6 +55,7 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 />
                 <input
+                    className="asd"
                     type="number"
                     placeholder="Total"
                     name="quantity"
@@ -67,10 +72,11 @@ const SalesForm = ({
                 <div className="suppliers-container">
                     <Select
                         className="custom-border"
-                        options={suppliers} 
+                        options={suppliers}
                     />
                 </div>
                 <input
+                    className="asd"
                     type="text"
                     placeholder="Received Payment"
                     name="quantity"
@@ -79,6 +85,7 @@ const SalesForm = ({
                 />
 
                 <input
+                    className="asd"
                     type="number"
                     placeholder="Thing"
                     name="quantity"
@@ -86,6 +93,7 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 />
                 <input
+                    className="asd"
                     type="text"
                     placeholder="Note"
                     name="quantity"

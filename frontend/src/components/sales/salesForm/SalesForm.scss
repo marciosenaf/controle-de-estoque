@@ -47,11 +47,7 @@ margin-bottom: 3rem;
         }
     }
 
-        input[type="text"],
-        input[type="number"],
-        input[type="file"],
-        input[type="email"],
-        input[type="password"] {
+.asd {
             font-weight: 300;
             padding: 1rem;
             border: 1px solid #777;
@@ -67,7 +63,7 @@ margin-bottom: 3rem;
     width: 100%;
     height: 100%;
     max-height: 280px;
-    border-radius: 3px;
+    border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s;
 }
