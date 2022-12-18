@@ -1,40 +1,35 @@
-import { FaTh, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
 import { FaBoxes } from "react-icons/fa"
 import { IoSettingsSharp } from "react-icons/io5"
 import {AiFillHome} from "react-icons/ai"
-// import {MdOutlineInventory} from "react-icons/md"
-// import {GiCardboardBoxClosed} from "react-icons/gi"
-// import { BiImageAdd } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { AiFillEdit } from "react-icons/ai";
 import { BsCashCoin } from "react-icons/bs"
 const menu = [
 
   {
     title: "Sales",
-    icon: <BsCashCoin />,
+    icon: <BsCashCoin title="Sales" />,
     path: "/sales",
   },
   {
     title: "Inventory",
-    icon: <FaBoxes />,
+    icon: <FaBoxes title="Inventory" />,
     path: "/inventory",
   },
 
   {
     title: "Profile",
-    icon: <CgProfile />,
+    icon: <CgProfile title="Profile" />,
     path: "/profile",
   },
   {
     title: "Settings",
-    icon: <IoSettingsSharp />,
+    icon: <IoSettingsSharp title="Settings" />,
     path: "/edit-profile"
 
   },
   {
     title: "Home",
-    icon: <AiFillHome />,
+    icon: <AiFillHome title="Home" />,
     path: "/",
   },
 

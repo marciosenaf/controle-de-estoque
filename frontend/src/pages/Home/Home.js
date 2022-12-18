@@ -10,18 +10,18 @@ const Home = () => {
       <nav className="container  ">
 
         <ul className="home-links">
-          <ShowOnLogout>
+          {/* <ShowOnLogout>
             <li>
-              <Link to="/register">Register</Link>
+              <Link to="/login">Login</Link>
             </li>
           </ShowOnLogout>
           <ShowOnLogout>
             <li>
               <button className="--btn --btn-primary">
-                <Link to="/login">Login</Link>
+                <Link to="/forgot">Forgot</Link>
               </button>
             </li>
-          </ShowOnLogout>
+          </ShowOnLogout> */}
           <ShowOnLogin>
             <li>
               <button className="--btn --btn-primary">
@@ -42,11 +42,25 @@ const Home = () => {
             in the warehouse in real time and integrated to
             make it easier to develop your business.
           </p>
-          <div className="hero-buttons">
-            <button className="--btn --btn-primary">
-              <Link to="/sales">Enter</Link>
-            </button>
-          </div>
+          <ShowOnLogin>
+            <div className="hero-buttons">
+              <Link to="/sales">
+                <button className="--btn botao-home">
+                  Enter
+                </button>
+                </Link>
+                
+            </div>
+          </ShowOnLogin>
+          <ShowOnLogout>
+            <div className="hero-buttons">
+            <Link to="/login">
+              <button className="--btn botao-home">
+                Login
+              </button>
+              </Link>
+            </div>
+          </ShowOnLogout>
         </div>
 
         <div className=" hero-image">

@@ -66,7 +66,7 @@ function App() {
           element={
             <SidebarConfig>
               <Layout title="Change Password">
-                <ChangePassword />
+                <ChangePassword/>
               </Layout>
             </SidebarConfig>
           }

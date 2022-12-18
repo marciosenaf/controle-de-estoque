@@ -18,17 +18,14 @@ max-width: 241.5px;
   
 
 
-  // background-color: green;
 
   &:hover {
-    cursor: pointer;
-    // border: 3px solid #fff;
     transform: translateY(-5px);
 
   }
 
   .info-icon {
-    padding: 0 32px;
+    padding: 0 25px;
     color: #fff;
   }
   .info-text > * {

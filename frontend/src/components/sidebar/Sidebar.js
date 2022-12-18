@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
             className="bars"
             style={{ marginLeft: isOpen ? "140px" : "0px" }}
           >
-            <HiMenuAlt3 onClick={toggle} />
+      <HiMenuAlt3 onClick={toggle} />
           </div>
         </div>
         {menu.map((item, index) => {

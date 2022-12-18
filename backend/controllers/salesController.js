@@ -11,7 +11,7 @@ const createProduct = asyncHandler(async (req, res) => {
     //   Validation
     if (!name || !category || !quantity || !price || !total || amoutpaid ) {
         res.status(400);
-        throw new Error("Please fill in all fields");
+        throw new Error("Please fill in all fields sdasda");
     }
 
     // Handle Image upload

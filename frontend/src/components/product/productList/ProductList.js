@@ -80,7 +80,7 @@ const ProductList = ({ products, isLoading }) => {
       <div className="table">
         <div className=" --flex-dir-column">
           <span>
-            <h4>Items</h4>
+            <h4 className="--mt">Items</h4>
           </span>
           <span>
             <Search

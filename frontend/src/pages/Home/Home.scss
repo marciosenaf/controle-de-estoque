@@ -46,6 +46,22 @@
   font-size: 30rem;
   color: #fff;
 }
+
+.botao-home {
+  padding: 10px 64px;
+  color: #fff;
+  border-color: #fff;
+  background:var(--dark-blue);
+  border-radius: 8px;
+  font-size: 17px;
+}
+.botao-home:hover {
+  color: var(--dark-blue);
+  background-color:white ;
+  border: 1px solid #777;
+  font-size: 17px;
+}
+
 @media screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
