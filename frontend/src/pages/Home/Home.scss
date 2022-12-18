@@ -18,7 +18,6 @@
   align-items: center;
 
   & > * {
-    margin-left: 1rem;
     color: #fff;
   }
 }
@@ -45,6 +44,30 @@
   display: flex;
   font-size: 30rem;
   color: #fff;
+}
+
+.btn-primario{
+  color: #fff;
+  background:var(--dark-blue);
+  font-size: 17px;
+}
+
+.btn-primario:hover {
+  color: #fff;
+border-radius: 0px;
+  border-bottom-color:   #fff;
+  font-size: 17px;
+}
+
+.--btns{
+  font-weight: 400;
+  padding: 6px 0px;
+  margin: 0 5px 0 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
 }
 
 .botao-home {

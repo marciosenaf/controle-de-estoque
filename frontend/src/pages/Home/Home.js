@@ -24,13 +24,18 @@ const Home = () => {
           </ShowOnLogout> */}
           <ShowOnLogin>
             <li>
-              <button className="--btn --btn-primary">
-                <Link to="/sales">Sales</Link>
-              </button>
+                <Link to="/sales">
+                <button className="--btn --btn-primary">
+                  Sales
+                </button>
+                  </Link>
+              
             </li>
-            <li>
-              <Link to="/inventory">inventory</Link>
-            </li>
+            <Link to="/inventory">
+            <button className="--btns btn-primario">
+              Inventory
+            </button>
+            </Link>
           </ShowOnLogin>
         </ul>
       </nav>
