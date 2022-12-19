@@ -501,10 +501,12 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
-  font-size: 1rem;
+  font-size: 15px;
 }
 
 .pagination .page-num {
+  font-size: 15px;
+
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 3px;

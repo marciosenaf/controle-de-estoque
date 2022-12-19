@@ -1,3 +1,4 @@
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useState } from "react";
 import styles from "./auth.module.scss";
 import { TiUserAddOutline } from "react-icons/ti";
@@ -17,6 +18,7 @@ const initialState = {
 };
 
 const Register = () => {
+  useRedirectLoggedOutUser("/");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);

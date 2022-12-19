@@ -55,7 +55,7 @@ const ProductList = ({ products, isLoading }) => {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -94,12 +94,11 @@ const ProductList = ({ products, isLoading }) => {
 
         <div className="table">
           {!isLoading && products.length === 0 ? (
-            <p>-- No product found, please add a product...</p>
+            <p>No product found, please add a product</p>
           ) : (
             <table>
               <thead>
                 <tr>
-                  <th>s/n</th>
                   <th>Name</th>
                   <th>Category</th>
                   <th>Price</th>
@@ -114,7 +113,6 @@ const ProductList = ({ products, isLoading }) => {
                   const { _id, name, category, price, quantity } = product;
                   return (
                     <tr key={_id}>
-                      <td>{index + 1}</td>
                       <td>{shortenText(name, 16)}</td>
                       <td>{category}</td>
                       <td>
