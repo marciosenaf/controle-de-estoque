@@ -75,7 +75,7 @@ const ProductForm = ({
                         <img src={imagePreview} alt="product" />
                     </div>
                 ) : (
-                    <p className="noimage"></p>
+                    <p className="noimage">Supported Formats: PNG, JPEG and JPG</p>
                 )}
                 </div>
 
