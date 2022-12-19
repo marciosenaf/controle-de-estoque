@@ -28,21 +28,21 @@ main {
   justify-content: space-around
 }
 .logo {
-  font-size: 30px;
+  transition: all 0.3s;
   color: var(--color-white);
+}
+.logo:hover{
+  color: var(--color-primary);
 }
 .bars {
   display: flex;
-  font-size: 25px;
   margin-left: 70px;
-  cursor: pointer;
   color: var(--color-white);
   transition: all 0.3s;
 }
 
 .bars:hover {
   color: var(--color-primary);
-  font-size: 27px;
 }
 
 .sidebar-item {

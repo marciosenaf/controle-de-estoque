@@ -7,29 +7,29 @@ const menu = [
 
   {
     title: "Sales",
-    icon: <BsCashCoin title="Sales" />,
+    icon: <BsCashCoin style={{ color: '#0a1930', }} title="Sales" />,
     path: "/sales",
   },
   {
     title: "Inventory",
-    icon: <FaBoxes title="Inventory" />,
+    icon: <FaBoxes style={{ color: '#0a1930', }} title="Inventory" />,
     path: "/inventory",
   },
 
   {
     title: "Profile",
-    icon: <CgProfile title="Profile" />,
+    icon: <CgProfile style={{ color: '#0a1930', }} title="Profile" />,
     path: "/profile",
   },
   {
     title: "Settings",
-    icon: <IoSettingsSharp title="Settings" />,
+    icon: <IoSettingsSharp style={{ color: '#0a1930', }} title="Settings" />,
     path: "/edit-profile"
 
   },
   {
     title: "Home",
-    icon: <AiFillHome title="Home" />,
+    icon: <AiFillHome style={{ color: '#0a1930', }} title="Home" />,
     path: "/",
   },
 

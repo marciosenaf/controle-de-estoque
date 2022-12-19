@@ -17,7 +17,7 @@ const Sidebar = ({ children }) => {
 
   return (
     <div className="layout">
-      <div className="sidebar" style={{ width: isOpen ? "230px" : "45px" }}>
+      <div className="sidebar" style={{ width: isOpen ? "210px" : "45px" }}>
         <div className="top_section">
           <div className="logo" style={{ display: isOpen ? "block" : "none" }}>
             <RxCross2
@@ -35,7 +35,7 @@ const Sidebar = ({ children }) => {
           </div>
         </div>
         {menu.map((item, index) => {
-          return <SidebarItemConf key={index} item={item} isOpen={isOpen} />;
+          return <SidebarItemConf  item={item} isOpen={isOpen} />;
         })}
       </div>
 

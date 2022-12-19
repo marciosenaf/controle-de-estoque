@@ -33,16 +33,15 @@ main {
 }
 .bars {
   display: flex;
+  cursor: pointer;
   font-size: 25px;
   margin-left: 70px;
-  cursor: pointer;
   color: var(--color-white);
   transition: all 0.3s;
 }
 
 .bars:hover {
   color: var(--color-primary);
-  font-size: 27px;
 }
 
 .sidebar-item {
