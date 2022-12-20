@@ -109,7 +109,7 @@ export const updateProduct = createAsyncThunk(
     }
 );
 
-const productSlice = createSlice({
+const salesSlice = createSlice({
     name: "product",
     initialState,
     reducers: {
@@ -238,7 +238,7 @@ const productSlice = createSlice({
 });
 
 export const { CALC_STORE_VALUE, CALC_OUTOFSTOCK, CALC_CATEGORY } =
-    productSlice.actions;
+salesSlice.actions;
 
 export const selectIsLoading = (state) => state.product.isLoading;
 export const selectProduct = (state) => state.product.product;
@@ -246,4 +246,4 @@ export const selectTotalStoreValue = (state) => state.product.totalStoreValue;
 export const selectOutOfStock = (state) => state.product.outOfStock;
 export const selectCategory = (state) => state.product.category;
 
-export default productSlice.reducer;
+export default salesSlice.reducer;

@@ -12,10 +12,10 @@ const salesSchema = mongoose.Schema(
             required: [true, "Please add a name"],
             trim: true,
         },
-        id: {
+        sku: {
             type: String,
             required: true,
-            default: "ID",
+            default: "SKU",
             trim: true,
         },
         category: {
@@ -23,40 +23,24 @@ const salesSchema = mongoose.Schema(
             required: [true, "Please add a category"],
             trim: true,
         },
-        price: {
-            type: String,
-            required: [true, "Please add a price"],
-            trim: true,
-        },
         quantity: {
             type: String,
             required: [true, "Please add a quantity"],
             trim: true,
         },
-        total: {
+        price: {
             type: String,
-            required: [true, "Please add a total"],
+            required: [true, "Please add a price"],
             trim: true,
         },
-        amoutpaid: {
+        description: {
             type: String,
-            required: [true, "Please add a amoutpaid"],
+            required: [true, "Please add a description"],
             trim: true,
         },
-        thing: {
-            type: String,
-            required: [true, "Please add a thing"],
-            trim: true,
-        },
-        receivendpaymant: {
-            type: String,
-            required: [true, "Please add a receivend paymant"],
-            trim: true,
-        },
-        note: {
-            type: String,
-            required: [true, "Please add a note"],
-            trim: true,
+        image: {
+            type: Object,
+            default: {},
         },
     },
     {
