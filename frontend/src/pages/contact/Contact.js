@@ -51,7 +51,7 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <button className="--btn botao">Send Message</button>
+            <button className="--btn botao">Send</button>
           </Card>
         </form>
 

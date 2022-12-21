@@ -12,7 +12,7 @@ const salesSchema = mongoose.Schema(
             required: [true, "Please add a name"],
             trim: true,
         },
-        id: {
+        codigo: {
             type: String,
             required: true,
             default: "ID",
