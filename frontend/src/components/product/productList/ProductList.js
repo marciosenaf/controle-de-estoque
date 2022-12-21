@@ -6,7 +6,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import Search from "../../search/Search";
 import { useDispatch, useSelector } from "react-redux";
 
-import { FILTER_PRODUCTS, selectFilteredProducts,} from "../../../redux/features/product/filterSlice";
+import { FILTER_PRODUCTS, selectFilteredProducts,} from "../../../redux/features/filterSlice";
 import { deleteProduct,getProducts,} from "../../../redux/features/product/productSlice";
 
 import ReactPaginate from "react-paginate";

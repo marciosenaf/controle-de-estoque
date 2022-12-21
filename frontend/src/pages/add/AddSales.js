@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader/Loader";
 import SalesForm from "../../components/sales/salesForm/SalesForm";
 import {
-    createProduct,
+    createSale,
     selectIsLoading,
 } from "../../redux/features/sales/salesSlice";
 
@@ -59,7 +59,7 @@ const AddSales = () => {
 
         console.log(...formData);
 
-        await dispatch(createProduct(formData));
+        await dispatch(createSale(formData));
 
         navigate("/sales");
     };

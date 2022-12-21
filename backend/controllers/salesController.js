@@ -5,7 +5,7 @@ const cloudinary = require("cloudinary").v2;
 
 
 // Create Prouct
-const createProduct = asyncHandler(async (req, res) => {
+const createSale = asyncHandler(async (req, res) => {
     const { name, sku, category, quantity, price, description } = req.body;
 
     //   Validation
@@ -53,13 +53,13 @@ const createProduct = asyncHandler(async (req, res) => {
 });
 
 // Get all Products
-const getProducts = asyncHandler(async (req, res) => {
+const getSales = asyncHandler(async (req, res) => {
     const products = await Sales.find({ user: req.user.id }).sort("-createdAt");
     res.status(200).json(products);
 });
 
 // Get single product
-const getProduct = asyncHandler(async (req, res) => {
+const getSale = asyncHandler(async (req, res) => {
     const product = await Sales.findById(req.params.id);
     // if product doesnt exist
     if (!product) {
@@ -75,7 +75,7 @@ const getProduct = asyncHandler(async (req, res) => {
 });
 
 // Delete Product
-const deleteProduct = asyncHandler(async (req, res) => {
+const deleteSale = asyncHandler(async (req, res) => {
     const product = await Sales.findById(req.params.id);
     // if product doesnt exist
     if (!product) {
@@ -92,7 +92,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 });
 
 // Update Product
-const updateProduct = asyncHandler(async (req, res) => {
+const updateSale = asyncHandler(async (req, res) => {
     const { name, category, quantity, price, description } = req.body;
     const { id } = req.params;
 
@@ -153,9 +153,9 @@ const updateProduct = asyncHandler(async (req, res) => {
 });
 
 module.exports = {
-    createProduct,
-    getProducts,
-    getProduct,
-    deleteProduct,
-    updateProduct,
+    createSale,
+    getSales,
+    getSale,
+    deleteSale,
+    updateSale,
 };

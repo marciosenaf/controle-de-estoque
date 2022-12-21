@@ -15,11 +15,11 @@ const initialState = {
 };
 
 // Create New Product
-export const createProduct = createAsyncThunk(
+export const createSale = createAsyncThunk(
     "products/create",
     async (formData, thunkAPI) => {
         try {
-            return await salesService.createProduct(formData);
+            return await salesService.createSale(formData);
         } catch (error) {
             const message =
                 (error.response &&
@@ -34,11 +34,11 @@ export const createProduct = createAsyncThunk(
 );
 
 // Get all products
-export const getProducts = createAsyncThunk(
+export const getSales = createAsyncThunk(
     "products/getAll",
     async (_, thunkAPI) => {
         try {
-            return await salesService.getProducts();
+            return await salesService.getSales();
         } catch (error) {
             const message =
                 (error.response &&
@@ -53,11 +53,11 @@ export const getProducts = createAsyncThunk(
 );
 
 // Delete a Product
-export const deleteProduct = createAsyncThunk(
+export const deleteSale = createAsyncThunk(
     "products/delete",
     async (id, thunkAPI) => {
         try {
-            return await salesService.deleteProduct(id);
+            return await salesService.deleteSale(id);
         } catch (error) {
             const message =
                 (error.response &&
@@ -72,11 +72,11 @@ export const deleteProduct = createAsyncThunk(
 );
 
 // Get a product
-export const getProduct = createAsyncThunk(
+export const getSale = createAsyncThunk(
     "products/getProduct",
     async (id, thunkAPI) => {
         try {
-            return await salesService.getProduct(id);
+            return await salesService.getSale(id);
         } catch (error) {
             const message =
                 (error.response &&
@@ -91,11 +91,11 @@ export const getProduct = createAsyncThunk(
 );
 
 // Update product
-export const updateProduct = createAsyncThunk(
+export const updateSale = createAsyncThunk(
     "products/updateProduct",
     async ({ id, formData }, thunkAPI) => {
         try {
-            return await salesService.updateProduct(id, formData);
+            return await salesService.updateSale(id, formData);
         } catch (error) {
             const message =
                 (error.response &&
@@ -156,10 +156,10 @@ const salesSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(createProduct.pending, (state) => {
+            .addCase(createSale.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(createProduct.fulfilled, (state, action) => {
+            .addCase(createSale.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.isError = false;
@@ -167,68 +167,68 @@ const salesSlice = createSlice({
                 state.products.push(action.payload);
                 toast.success("Product added successfully");
             })
-            .addCase(createProduct.rejected, (state, action) => {
+            .addCase(createSale.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.message = action.payload;
                 toast.error(action.payload);
             })
-            .addCase(getProducts.pending, (state) => {
+            .addCase(getSales.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(getProducts.fulfilled, (state, action) => {
+            .addCase(getSales.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.isError = false;
                 console.log(action.payload);
                 state.products = action.payload;
             })
-            .addCase(getProducts.rejected, (state, action) => {
+            .addCase(getSales.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.message = action.payload;
                 toast.error(action.payload);
             })
-            .addCase(deleteProduct.pending, (state) => {
+            .addCase(deleteSale.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(deleteProduct.fulfilled, (state, action) => {
+            .addCase(deleteSale.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.isError = false;
                 toast.success("Product deleted successfully");
             })
-            .addCase(deleteProduct.rejected, (state, action) => {
+            .addCase(deleteSale.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.message = action.payload;
                 toast.error(action.payload);
             })
-            .addCase(getProduct.pending, (state) => {
+            .addCase(getSale.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(getProduct.fulfilled, (state, action) => {
+            .addCase(getSale.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.isError = false;
                 state.product = action.payload;
             })
-            .addCase(getProduct.rejected, (state, action) => {
+            .addCase(getSale.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.message = action.payload;
                 toast.error(action.payload);
             })
-            .addCase(updateProduct.pending, (state) => {
+            .addCase(updateSale.pending, (state) => {
                 state.isLoading = true;
             })
-            .addCase(updateProduct.fulfilled, (state, action) => {
+            .addCase(updateSale.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.isSuccess = true;
                 state.isError = false;
                 toast.success("Product updated successfully");
             })
-            .addCase(updateProduct.rejected, (state, action) => {
+            .addCase(updateSale.rejected, (state, action) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.message = action.payload;

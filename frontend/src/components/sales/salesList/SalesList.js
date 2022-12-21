@@ -7,8 +7,8 @@ import { AiOutlineEye } from "react-icons/ai";
 import Search from "../../search/Search";
 import { useDispatch, useSelector } from "react-redux";
 
-import { FILTER_PRODUCTS, selectFilteredProducts, } from "../../../redux/features/sales/filtersSlice";
-import { deleteProduct, getProducts, } from "../../../redux/features/sales/salesSlice";
+import { FILTER_PRODUCTS, selectFilteredProducts, } from "../../../redux/features/filterSlice";
+import { deleteSale, getSales, } from "../../../redux/features/sales/salesSlice";
 
 import ReactPaginate from "react-paginate";
 import { confirmAlert } from "react-confirm-alert";
@@ -31,8 +31,8 @@ const SalesList = ({ products, isLoading }) => {
 
     const delProduct = async (id) => {
         console.log(id);
-        await dispatch(deleteProduct(id));
-        await dispatch(getProducts());
+        await dispatch(deleteSale(id));
+        await dispatch(getSales());
     };
 
     const confirmDelete = (id) => {

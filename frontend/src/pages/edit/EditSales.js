@@ -7,11 +7,11 @@ import "./EditSales.scss"
 import Card from "../../components/card/Card";
 import ProductForm from "../../components/sales/salesForm/SalesForm";
 import {
-    getProduct,
-    getProducts,
+    getSale,
+    getSales,
     selectIsLoading,
     selectProduct,
-    updateProduct,
+    updateSale,
 } from "../../redux/features/sales/salesSlice";
 
 const EditSales = () => {
@@ -29,7 +29,7 @@ const EditSales = () => {
     const [description, setDescription] = useState("");
 
     useEffect(() => {
-        dispatch(getProduct(id));
+        dispatch(getSale(id));
     }, [dispatch, id]);
 
     useEffect(() => {
@@ -69,8 +69,8 @@ const EditSales = () => {
 
         console.log(...formData);
 
-        await dispatch(updateProduct({ id, formData }));
-        await dispatch(getProducts());
+        await dispatch(updateSale({ id, formData }));
+        await dispatch(getSales());
         navigate("/inventory");
     };
 

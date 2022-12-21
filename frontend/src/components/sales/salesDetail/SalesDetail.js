@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import useRedirectLoggedOutUser from "../../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../../redux/features/auth/authSlice";
-import { getProduct } from "../../../redux/features/sales/salesSlice";
+import { getSale } from "../../../redux/features/sales/salesSlice";
 import Card from "../../card/Card";
 import { SpinnerImg } from "../../loader/Loader";
 import "./SalesDetail.scss";
@@ -29,7 +29,7 @@ const SalesDetail = () => {
 
     useEffect(() => {
         if (isLoggedIn === true) {
-            dispatch(getProduct(id));
+            dispatch(getSale(id));
         }
 
         if (isError) {
