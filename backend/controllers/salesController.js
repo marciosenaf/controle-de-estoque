@@ -6,12 +6,12 @@ const cloudinary = require("cloudinary").v2;
 
 // Create Prouct
 const createSale = asyncHandler(async (req, res) => {
-    const { name, codigo, category, price, quantity, total, method, payment, thing, note  } = req.body;
+    const { name, codigo, category, price, quantity, total, payment, thing, note  } = req.body;
 
     //   Validation
-    if (!name || !category || !price || !quantity || !total  || !method || !payment || !thing || !note ) {
+    if (!name || !category || !price || !quantity || !total || !payment || !thing || !note ) {
         res.status(400);
-        throw new Error("Please fill in all fields sdasda");
+        throw new Error("Please fill in all fields");
     }
 
     // Handle Image upload
@@ -45,7 +45,7 @@ const createSale = asyncHandler(async (req, res) => {
         category,
         quantity,
         total,
-        method,
+        // method,
         payment,
         thing,
         note,
@@ -96,7 +96,7 @@ const deleteSale = asyncHandler(async (req, res) => {
 
 // Update Product
 const updateSale = asyncHandler(async (req, res) => {
-    const { name, category, price, quantity, total, method, payment, thing, note  } = req.body;
+    const { name, category, price, quantity, total, payment, thing, note  } = req.body;
     const { id } = req.params;
 
     const product = await Sales.findById(id);
@@ -144,7 +144,7 @@ const updateSale = asyncHandler(async (req, res) => {
             price,
             quantity,
             total,
-            method,
+            // method,
             payment,
             thing,
             note,

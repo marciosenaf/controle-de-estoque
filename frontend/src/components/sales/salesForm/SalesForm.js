@@ -50,16 +50,16 @@ const SalesForm = ({
                     className="asd"
                     type="number"
                     placeholder="Product Quantity"
-                    name="Quantity"
-                    // value={product?.quantity}
+                    name="quantity"
+                    value={product?.quantity}
                     onChange={handleInputChange}
                 />
                 <input
                     className="asd"
                     type="number"
                     placeholder="Total"
-                    name="quantity"
-                    // value={product?.quantity}
+                    name="total"
+                    value={product?.total}
                     onChange={handleInputChange}
                 />
                 {/* <input
@@ -70,17 +70,19 @@ const SalesForm = ({
                     onChange={handleInputChange}
                 /> */}
                 <div className="suppliers-container">
-                    <Select
+                    {/* <Select
+                        value={product?.method}
                         className="custom-border"
+                        name="method"
                         options={suppliers}
-                    />
+                    /> */}
                 </div>
                 <input
                     className="asd"
                     type="text"
                     placeholder="Received Payment"
-                    name="quantity"
-                    // value={product?.quantity}
+                    name="payment"
+                    value={product?.payment}
                     onChange={handleInputChange}
                 />
 
@@ -88,16 +90,16 @@ const SalesForm = ({
                     className="asd"
                     type="number"
                     placeholder="Thing"
-                    name="quantity"
-                    // value={product?.quantity}
+                    name="thing"
+                    value={product?.thing}
                     onChange={handleInputChange}
                 />
                 <input
                     className="asd"
                     type="text"
                     placeholder="Note"
-                    name="quantity"
-                    // value={product?.quantity}
+                    name="note"
+                    value={product?.note}
                     onChange={handleInputChange}
                 />
                 <button type="submit" className="--btn --btns-primary-sales">Save Product</button>

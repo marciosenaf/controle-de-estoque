@@ -25,10 +25,9 @@ main {
   transition: all 0.5s;
   background-color: var(--dark-blue);
   height: 70px;
-  justify-content: space-around
 }
 .logo {
-  transition: all 0.3s;
+  transition: all 0.5s;
   color: var(--color-white);
 }
 .logo:hover{
@@ -38,7 +37,7 @@ main {
   display: flex;
   margin-left: 70px;
   color: var(--color-white);
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .bars:hover {
@@ -49,7 +48,7 @@ main {
   padding: 0.75em 0em;
   display: block;
   border-radius: 5px;
-  transition: background-color 0.15s;
+  transition: background-color 0.25s;
 }
 
 .s-parent {
