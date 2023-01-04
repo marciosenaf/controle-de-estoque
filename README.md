@@ -47,6 +47,10 @@ npm start
 npm run backend
 ```
 
+## ☕ Seja um dos contribuidores
+
+Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.<br>
+
 # Autor
 
 Márcio Sena Santos Filho
