@@ -1,7 +1,5 @@
 
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/marciosenaf/controle-de-estoque/new/main) 
-
-# Sobre o Projeto
+## Sobre o Projeto
 
 Site: https://controle-de-estoque.pages.dev/ (front-end)
 
@@ -16,7 +14,7 @@ Este é um projeto Full Stack que visa o controle de uma empresa comercial com l
 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_215037.png)
 
-# Tecnologias usadas 
+## Tecnologias usadas 
 
 - Linguagem de programação JavaScript
 - feito na biblioteca React js e framework express
@@ -26,21 +24,21 @@ Este é um projeto Full Stack que visa o controle de uma empresa comercial com l
 ## Implantação para produção
 - CloudFlare
 
-# Como executar o projeto
+## Como executar o projeto
 ```bash
-# clonar repositorio
+Clonar repositorio
 git clone https://github.com/marciosenaf/controle-de-estoque
 
-# Instalar dependencias
+Instalar dependencias
 npm install
 
-# Build o projeto 
+Build o projeto 
 npm run build
 
-# Executar o projeto (frontend)
+Executar o projeto (frontend)
 npm start
 
-# Executar o projeto (backend)
+Executar o projeto (backend)
 npm run backend
 ```
 
