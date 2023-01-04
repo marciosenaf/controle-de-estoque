@@ -1,58 +1,57 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/marciosenaf/controle-de-estoque/new/main) 
 
-# About the Project
+# Sobre o Projeto
 
-Demo: https://controle-de-estoque.pages.dev/ (backend is down)
+Site: https://controle-de-estoque.pages.dev/ (front-end)
 
-This is a Full Stack project that aims to control products with the addition of images, implemented login login and password recovery
+Este é um projeto Full Stack que visa o controle de uma empresa comercial com login implementado e recuperação de senha
 
-## Computer layout
+## Layout no computador 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_214851.png)
 
-## Computer layout
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_214933.png)
 
-## Computer layout
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_215015.png)
 
-## Computer layout
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_215037.png)
 
-# Technologies used Backend
+# Tecnologias usadas 
 
-- JavaScript programming language 
-- made in React js library and express framework
-- -npm installation package
+- Linguagem de programação JavaScript
+- feito na biblioteca React js e framework express
+- pacote de instalação -npm
 
 
-## Deployment to production
+## Implantação para produção
 - CloudFlare
 
-# How to run the project
+# Como executar o projeto
 ```bash
-# clone repository
+# clonar repositorio
 git clone https://github.com/marciosenaf/controle-de-estoque
 
-# Install dependencies
+# Instalar dependencias
 npm install
 
-# Build the project 
+# Build o projeto 
 npm run build
 
-# Run the project (frontend)
+# Executar o projeto (frontend)
 npm start
 
-# Run the project (backend)
+# Executar o projeto (backend)
 npm run backend
 ```
 
-## ☕ Seja um dos contribuidores
+## ☕ Seja um dos colaboradores
 
 Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.<br>
 
-# Autor
+## 🍜 Licença
 
-Márcio Sena Santos Filho
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.<br>
 
+## 👨‍💻 Sobre mim
+ 
 https://www.linkedin.com/in/marciosenaf/
