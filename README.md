@@ -1,28 +1,24 @@
 
-## Sobre o Projeto
+## 🎨 Sobre o Projeto
 
 Site: https://controle-de-estoque.pages.dev/ (front-end)
 
 Este é um projeto Full Stack que visa o controle de uma empresa comercial com login implementado e recuperação de senha
 
-## Layout no computador 
+## 💻 Layout
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/inventory.png)
 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/login.png)
 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/editprofile.png)
 
-## Tecnologias usadas 
+## 🐴 Tecnologias usadas 
 
 - Linguagem de programação JavaScript
 - feito na biblioteca React js e framework express
 - pacote de instalação -npm
 
-
-## Implantação para produção
-- CloudFlare
-
-## Como executar o projeto
+## 🔧 Como executar o projeto
 ```bash
 Clonar repositorio
 git clone https://github.com/marciosenaf/controle-de-estoque
