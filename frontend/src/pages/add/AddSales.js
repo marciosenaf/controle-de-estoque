@@ -15,6 +15,7 @@ const initialState = {
     quantity: "",
     price: "",
     total: "",
+    method:"",
     payment: "",
     thing: "",
     note: "",
@@ -32,7 +33,7 @@ const AddSales = () => {
 
     const isLoading = useSelector(selectIsLoading);
 
-    const { name, category, price, quantity, total, payment, thing, note } = product;
+    const { name, category, price, quantity, total, payment, method , thing, note } = product;
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -44,10 +45,9 @@ const AddSales = () => {
         setImagePreview(URL.createObjectURL(e.target.files[0]));
     };
 
-    const generateKSKU = (category) => {
-        const letter = category.slice(0, 3).toUpperCase();
+    const generateKSKU = () => {
         const number = Date.now();
-        const sku = letter + "-" + number;
+        const sku = number;
         return sku;
     };
 
@@ -60,11 +60,12 @@ const AddSales = () => {
         formData.append("quantity", Number(quantity));
         formData.append("price", price);
         formData.append("total", total);
+        formData.append("method", method);
         formData.append("payment", payment);
         formData.append("thing", thing);
         formData.append("note", note);
 
-        // formData.append("image", productImage);
+        formData.append("image", productImage);
 
         console.log(...formData);
 

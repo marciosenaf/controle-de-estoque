@@ -3,12 +3,6 @@ import "react-quill/dist/quill.snow.css";
 import "./SalesForm.scss";
 import Select from "react-select"
 
-const suppliers = [
-    { label: 'Pix', value: 'Pix' },
-    { label: 'Cartão', value: 'Cartão' },
-    { label: 'Dinheiro', value: 'Dinheiro' },
-]
-
 const SalesForm = ({
     product,
     productImage,
@@ -19,6 +13,7 @@ const SalesForm = ({
     handleImageChange,
     saveProduct,
 }) => {
+    
     return (
         <div className="add">
             <form className="add-sales" onSubmit={saveProduct}>
@@ -62,21 +57,29 @@ const SalesForm = ({
                     value={product?.total}
                     onChange={handleInputChange}
                 />
-                {/* <input
-                    type="number"
-                    placeholder="Amount Paid"
-                    name="quantity"
-                    // value={product?.quantity}
-                    onChange={handleInputChange}
-                /> */}
-                <div className="suppliers-container">
+                {/* <div className="suppliers-container"> */}
                     {/* <Select
-                        value={product?.method}
+                        value={breed?.method}
                         className="custom-border"
                         name="method"
-                        options={suppliers}
+                        options={
+                            [
+                                { label: 'Pix', value: 'Pix' },
+                                { label: 'Cartão', value: 'Cartão' },
+                                { label: 'Dinheiro', value: 'Dinheiro' },
+                            ]
+                        }
+                        onChange={handleChange}
                     /> */}
-                </div>
+                    <input
+                    className="asd"
+                    type="text"
+                    placeholder="method"
+                    name="method"
+                    value={product?.method}
+                    onChange={handleInputChange}
+                />
+                {/* </div> */}
                 <input
                     className="asd"
                     type="text"

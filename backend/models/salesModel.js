@@ -38,11 +38,11 @@ const salesSchema = mongoose.Schema(
             required: [true, "Please add a total"],
             trim: true,
         },
-        // method: {
-        //     type: String,
-        //     required: [true, "Please add a method"],
-        //     trim: true,
-        // },
+        method: {
+            type: String,
+            required: [true, "Please add a method"],
+            trim: true,
+        },
         payment: {
             type: String,
             required: [true, "Please add a payment"],

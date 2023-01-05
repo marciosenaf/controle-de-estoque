@@ -54,13 +54,12 @@ const SalesDetail = () => {
                                 <p className="--color-white">No image set for this product</p>
                             )}
                         </Card>
-                        <h4 className="--color-white">Product Availability: {stockStatus(product.quantity)}</h4>
                         <hr />
                         <h4 className="--color-white">
                             <span className="badge">Name:</span> &nbsp; {product.name}
                         </h4>
                         <p className="--color-dark">
-                            <b className="--color-white" >&rarr; SKU : </b> {product.sku}
+                            <b className="--color-white" >&rarr; Id : </b> {product.id}
                         </p>
                         <p className="--color-dark">
                             <b className="--color-white">&rarr; Category : </b> {product.category}
@@ -83,7 +82,7 @@ const SalesDetail = () => {
                             }}
                         ></div>
                         <hr />
-                        <code className="--color-white">
+                        <code className="--color-white ">
                             Created on: {product.createdAt.toLocaleString("en-US")}
                         </code>
                         <br />
