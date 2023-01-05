@@ -12,7 +12,7 @@ Este é um projeto Full Stack que visa o controle de uma empresa comercial com l
 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/editprofile.png)
 
-## 🐴 Tecnologias usadas 
+## ⚙️ Tecnologias usadas 
 
 - Linguagem de programação JavaScript
 - feito na biblioteca React js e framework express
@@ -40,7 +40,7 @@ npm run backend
 
 Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.<br>
 
-## 🍜 Licença
+## 📃 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.<br>
 
