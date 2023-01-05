@@ -6,13 +6,11 @@ Site: https://controle-de-estoque.pages.dev/ (front-end)
 Este é um projeto Full Stack que visa o controle de uma empresa comercial com login implementado e recuperação de senha
 
 ## Layout no computador 
-![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_214851.png)
+![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/inventory.png)
 
-![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_214933.png)
+![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/login.png)
 
-![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_215015.png)
-
-![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/Screenshot_20221123_215037.png)
+![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/editprofile.png)
 
 ## Tecnologias usadas 
 
