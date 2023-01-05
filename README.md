@@ -12,13 +12,13 @@ Este é um projeto Full Stack que visa o controle de uma empresa comercial com l
 
 ![Web](https://github.com/marciosenaf/controle-de-estoque/blob/main/readme-img/editprofile.png)
 
-## ⚙️ Tecnologias usadas 
+## 🔧 Tecnologias usadas 
 
 - Linguagem de programação JavaScript
 - feito na biblioteca React js e framework express
 - pacote de instalação -npm
 
-## 🔧 Como executar o projeto
+## ⚙️ Como executar o projeto
 ```bash
 Clonar repositorio
 git clone https://github.com/marciosenaf/controle-de-estoque
