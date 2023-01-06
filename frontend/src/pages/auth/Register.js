@@ -1,4 +1,3 @@
-import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useState } from "react";
 import styles from "./auth.module.scss";
 import { TiUserAddOutline } from "react-icons/ti";
@@ -18,7 +17,6 @@ const initialState = {
 };
 
 const Register = () => {
-  useRedirectLoggedOutUser("/");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +55,7 @@ const Register = () => {
       // console.log(data);
       await dispatch(SET_LOGIN(true));
       await dispatch(SET_NAME(data.name));
-      navigate("/inventory");
+      navigate("/sistema");
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
@@ -72,7 +70,7 @@ const Register = () => {
           <div className="--flex-center">
             <TiUserAddOutline size={35} color="#999" />
           </div>
-          <h2>Register</h2>
+          <h2>  </h2>
 
           <form onSubmit={register}>
             <input
@@ -110,11 +108,6 @@ const Register = () => {
             <button type="submit" className="--btn --btn-primary --btn-block"> Register</button>
           </form>
 
-          <span className={styles.register}>
-            <Link to="/">Home</Link>
-            <p> &nbsp; Already have an account? &nbsp;</p>
-            <Link to="/login">Login</Link>
-          </span>
         </div>
       </Card>
     </div>
