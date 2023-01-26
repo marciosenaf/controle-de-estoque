@@ -22,7 +22,7 @@ const Header = ({ title }) => {
         <di></di>
         {!title ?
           <h3 >
-            <span className="--fw-thin">Welcome, </span>
+            <span className="--fw-thin">Bem Vindo, </span>
             <span className="--color-blue">{name}</span>
           </h3>
 
