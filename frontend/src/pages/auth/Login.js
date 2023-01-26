@@ -47,7 +47,7 @@ const Login = () => {
       console.log(data);
       await dispatch(SET_LOGIN(true));
       await dispatch(SET_NAME(data.name));
-      navigate("/sistema");
+      navigate("/inventory");
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
@@ -85,6 +85,14 @@ const Login = () => {
               Login
             </button>
           </form>
+          <span className={styles.login}>
+          <p>
+            <Link to="/">- Home</Link>
+          </p>
+          <p>
+          <Link className="forgotpass" to="/forgot">- Forgot Password</Link> 
+          </p>           
+          </span>
         </div>
       </Card>
     </div>

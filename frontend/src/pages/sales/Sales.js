@@ -1,13 +1,13 @@
-import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ProductList from "../../components/product/productList/ProductList";
-import ProductSummary from "../../components/product/productSummary/ProductSummary";
+import SalesList from "../../components/sales/salesList/SalesList";
+import SalesSummary from "../../components/sales/salesSummary/SalesSummary";
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
-import { getProducts } from "../../redux/features/product/productSlice";
-import AddProduct from "../add/AddProduct"
+import { getSales } from "../../redux/features/sales/salesSlice";
+import AddSales from "../add/AddSales";
 
-const Inventory = () => {
+const Sales = () => { 
   useRedirectLoggedOutUser("/login");
   const dispatch = useDispatch();
 
@@ -18,7 +18,7 @@ const Inventory = () => {
 
   useEffect(() => {
     if (isLoggedIn === true) {
-      dispatch(getProducts());
+      dispatch(getSales());
     }
 
     if (isError) {
@@ -26,13 +26,14 @@ const Inventory = () => {
     }
   }, [isLoggedIn, isError, message, dispatch]);
 
+  
   return (
     <div>
-      <ProductSummary products={products} />
-      <AddProduct/>
-      <ProductList products={products} isLoading={isLoading} />
+      <SalesSummary products={products} />
+      <AddSales/>
+      <SalesList products={products} isLoading={isLoading} />
     </div>
   );
 };
 
-export default Inventory;
+export default Sales;

@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-=======
-// import { MdKeyboardArrowRight } from "react-icons/md";
->>>>>>> parent of 7ea71ee (added)
+import { MdKeyboardArrowRight } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const activeLink = ({ isActive }) => (isActive ? "active" : "link");
@@ -23,11 +20,11 @@ const SidebarItem = ({ item, isOpen }) => {
             {item.icon && <div className="icon">{item.icon}</div>}
             {isOpen && <div>{item.title}</div>}
           </span>
-          {/* <MdKeyboardArrowRight
+          <MdKeyboardArrowRight
             size={25}
             className="arrow-icon"
             onClick={() => setExpandMenu(!expandMenu)}
-          /> */}
+          />
         </div>
         <div className="sidebar-content">
           {item.childrens.map((child, index) => {
