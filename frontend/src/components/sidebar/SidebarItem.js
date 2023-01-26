@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-=======
-// import { MdKeyboardArrowRight } from "react-icons/md";
->>>>>>> parent of 7ea71ee (added)
 import { NavLink } from "react-router-dom";
 
 const activeLink = ({ isActive }) => (isActive ? "active" : "link");
