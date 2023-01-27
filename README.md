@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ## Sobre o Projeto
 
@@ -108,4 +107,3 @@ Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais
 ## 👨‍💻 Sobre mim
  
 https://www.linkedin.com/in/marciosenaf/
->>>>>>> 5d8a7b75477f2531d57d26a8d8c6624ca7ea9159
